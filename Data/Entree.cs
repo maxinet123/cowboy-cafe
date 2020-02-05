@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Nathan Bean
+* Edited By: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A base class for the entrees
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

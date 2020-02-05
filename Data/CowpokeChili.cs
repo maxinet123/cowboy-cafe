@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Nathan Bean
+* Edited By: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class representing the qualities for the Cowboy Chili
+*/
+using System;
 using System.Collections.Generic;
 
 namespace CowboyCafe.Data

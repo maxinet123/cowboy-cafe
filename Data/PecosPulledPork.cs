@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class representing the qualities for the Pecos Pulled Pork
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

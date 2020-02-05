@@ -1,11 +1,22 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class representing the qualities for the Chili Cheese Fries
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// A class representing the Chili Cheese Fries side
+    /// </summary>
     public class ChiliCheeseFries : Side
     {
+        /// <summary>
+        /// Calories depending on size for Chili Cheese Fries
+        /// </summary>
         public override uint Calories
         {
             get
@@ -22,7 +33,11 @@ namespace CowboyCafe.Data
                         throw new NotImplementedException();
                 }
             }
+
         }
+        /// <summary>
+        /// Price depending on size for Chili Cheese Fries
+        /// </summary>
         public override double Price
         {
             get

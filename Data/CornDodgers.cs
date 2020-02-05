@@ -1,11 +1,22 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class representing the qualities for the Corn Dodgers
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// A class representing the Corn Dodgers side
+    /// </summary>
     public class CornDodgers : Side
     {
+        /// <summary>
+        /// Calories depending on size for Corn Dodgers
+        /// </summary>
         public override uint Calories
         {
             get
@@ -23,6 +34,9 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        /// <summary>
+        /// Price depending on size for Corn Dodgers
+        /// </summary>
         public override double Price
         {
             get

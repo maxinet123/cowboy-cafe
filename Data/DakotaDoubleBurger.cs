@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class representing the qualities for the Dakota Double Burger
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
