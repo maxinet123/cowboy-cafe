@@ -12,7 +12,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Trail Burger entree
     /// </summary>
-    public class TrailBurger :Entree
+    public class TrailBurger : Entree
     {
         private bool bun = true;
         /// <summary>
@@ -88,7 +88,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Special instructions for the preparation of the burger
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

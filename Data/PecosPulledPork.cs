@@ -59,7 +59,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Special instructions for the preparation of the pulled pork sandwich
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

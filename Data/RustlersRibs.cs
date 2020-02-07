@@ -39,7 +39,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Special instructions for the preparation of the burger
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -48,6 +48,7 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
     }
 }
 
