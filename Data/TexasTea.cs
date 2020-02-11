@@ -45,20 +45,31 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// Calories depending on size for Texas Tea
+        /// Calories depending on size and sweetness for Texas Tea
         /// </summary>
         public override uint Calories
         {
             get
             {
-                //NEED TO FIGURE HALF OF AMOUNT FOR WITHOUT SWEETENER
                 switch (Size)
                 {
                     case Size.Small:
+                        if (!sweet)
+                        {
+                            return 5;
+                        }
                         return 10;
                     case Size.Medium:
+                        if (!sweet)
+                        {
+                            return 11;
+                        }
                         return 22;
                     case Size.Large:
+                        if (!sweet)
+                        {
+                            return 18;
+                        }
                         return 36;
                     default:
                         throw new NotImplementedException();
@@ -96,8 +107,8 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!ice) instructions.Add("hold ice");
-                if (lemon) instructions.Add("add lemon");
+                if (!ice) instructions.Add("Hold Ice");
+                if (lemon) instructions.Add("Add Lemon");
 
                 return instructions;
             }

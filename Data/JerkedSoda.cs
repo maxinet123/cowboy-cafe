@@ -71,7 +71,7 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// Gets the special instructions for the drink
+        /// Gets the special instructions for the Jerked soda
         /// </summary>
         public override List<string> SpecialInstructions
         {
@@ -79,7 +79,7 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!ice) instructions.Add("hold ice");
+                if (!ice) instructions.Add("Hold Ice");
 
                 return instructions;
             }
