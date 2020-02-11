@@ -9,6 +9,9 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// A enumerator class for the different soda flavors
+    /// </summary>
     public enum SodaFlavor
     {
         CreamSoda,

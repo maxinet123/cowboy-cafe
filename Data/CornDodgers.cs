@@ -34,6 +34,7 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
         /// <summary>
         /// Price depending on size for Corn Dodgers
         /// </summary>

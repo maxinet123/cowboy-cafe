@@ -34,6 +34,7 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
         /// <summary>
         /// Price depending on size for Baked Beans
         /// </summary>

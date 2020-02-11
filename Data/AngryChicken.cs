@@ -34,6 +34,7 @@ namespace CowboyCafe.Data
             get { return pickle; }
             set { pickle = value; }
         }
+
         /// <summary>
         /// The price of the chicken sandwich
         /// </summary>

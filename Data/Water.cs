@@ -1,26 +1,36 @@
-﻿/*
-* Author: Maxine Teixeira
-* Class: CIS 400
-* Purpose: A class representing the qualities for the Jerked Soda
-*/
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
-{
+{    
     /// <summary>
-    /// A class representing the Jerked Soda drink
-    /// </summary>
-    public class JerkedSoda : Drink
+     /// A class representing the water drink
+     /// </summary>
+    public class Water : Drink
     {
+        private bool ice = true;
         /// <summary>
-        /// Gets the flavor of the soda
+        /// If the water comes with ice.
         /// </summary>
-        public SodaFlavor Flavor { get; set; }
+        public override bool Ice
+        {
+            get { return ice; }
+            set { ice = value; }
+        }
+
+        private bool lemon = false;
+        /// <summary>
+        /// If the water comes with ice.
+        /// </summary>
+        public bool Lemon
+        {
+            get { return lemon; }
+            set { lemon = value; }
+        }
 
         /// <summary>
-        /// Calories depending on size for Jerked Soda
+        /// Calories depending on size for water
         /// </summary>
         public override uint Calories
         {
@@ -29,18 +39,19 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 110;
+                        return 0;
                     case Size.Medium:
-                        return 146;
+                        return 0;
                     case Size.Large:
-                        return 198;
+                        return 0;
                     default:
                         throw new NotImplementedException();
                 }
             }
         }
+
         /// <summary>
-        /// Price depending on size for Jerked Soda
+        /// Price depending on size for water
         /// </summary>
         public override double Price
         {
@@ -49,29 +60,19 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Small:
-                        return 1.59;
+                        return 0.12;
                     case Size.Medium:
-                        return 2.10;
+                        return 0.12;
                     case Size.Large:
-                        return 2.59;
+                        return 0.12;
                     default:
                         throw new NotImplementedException();
                 }
             }
         }
 
-        private bool ice = true;
         /// <summary>
-        /// If the jerked soda comes with ice.
-        /// </summary>
-        public override bool Ice
-        {
-            get { return ice; }
-            set { ice = value; }
-        }
-
-        /// <summary>
-        /// Gets the special instructions for the drink
+        /// Gets the special instructions for the water
         /// </summary>
         public override List<string> SpecialInstructions
         {
@@ -80,6 +81,7 @@ namespace CowboyCafe.Data
                 var instructions = new List<string>();
 
                 if (!ice) instructions.Add("hold ice");
+                if (lemon) instructions.Add("add lemon");
 
                 return instructions;
             }

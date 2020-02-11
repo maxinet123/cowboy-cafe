@@ -35,6 +35,7 @@ namespace CowboyCafe.Data
             }
 
         }
+
         /// <summary>
         /// Price depending on size for Chili Cheese Fries
         /// </summary>

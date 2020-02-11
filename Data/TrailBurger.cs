@@ -23,6 +23,7 @@ namespace CowboyCafe.Data
             get { return bun; }
             set { bun = value; }
         }
+
         private bool cheese = true;
         /// <summary>
         /// If the burger is topped with cheese

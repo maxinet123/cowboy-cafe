@@ -63,6 +63,7 @@ namespace CowboyCafe.Data
             get { return pickle; }
             set { pickle = value; }
         }
+
         private bool tomato = true;
         /// <summary>
         /// If the burger is topped with tomato

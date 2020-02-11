@@ -10,7 +10,7 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// A base class representing a side
+    /// A base class representing a drink
     /// </summary>
     public abstract class Drink
     {
@@ -25,19 +25,19 @@ namespace CowboyCafe.Data
         public abstract uint Calories { get; }
         
         /// <summary>
-        /// Gets the ingredients of the drink
+        /// Gets the special instructions for the drink
         /// </summary>
-        public abstract List<string> Ingredients { get; }
+        public abstract List<string> SpecialInstructions { get; }
         
         /// <summary>
         /// Gets the size of the drink
         /// </summary>
         public virtual Size Size { get; set; }
-        
+
         /// <summary>
         /// Gets the bool for ice in the drink
         /// </summary>
-        public abstract bool Ice { get; }
+        public virtual bool Ice { get; set; } = true;
     }
 
 }

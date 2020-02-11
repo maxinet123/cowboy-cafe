@@ -1,7 +1,7 @@
 ﻿/*
 * Author: Maxine Teixeira
 * Class: CIS 400
-* Purpose: A class representing the qualities for the Jerked Soda
+* Purpose: A class representing the qualities for the Texas Tea
 */
 using System;
 using System.Collections.Generic;
@@ -10,59 +10,33 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// A class representing the Jerked Soda drink
+    /// A  class representing the qualities for the Texas tea
     /// </summary>
-    public class JerkedSoda : Drink
+    public class TexasTea : Drink
     {
+        private bool sweet = true;
         /// <summary>
-        /// Gets the flavor of the soda
+        /// If the Texas Tea is sweet
         /// </summary>
-        public SodaFlavor Flavor { get; set; }
-
-        /// <summary>
-        /// Calories depending on size for Jerked Soda
-        /// </summary>
-        public override uint Calories
+        public bool Sweet
         {
-            get
-            {
-                switch (Size)
-                {
-                    case Size.Small:
-                        return 110;
-                    case Size.Medium:
-                        return 146;
-                    case Size.Large:
-                        return 198;
-                    default:
-                        throw new NotImplementedException();
-                }
-            }
+            get { return sweet; }
+            set { sweet = value; }
         }
+
+        private bool lemon = false;
         /// <summary>
-        /// Price depending on size for Jerked Soda
+        /// If the Texas Tea comes with a lemon
         /// </summary>
-        public override double Price
+        public bool Lemon
         {
-            get
-            {
-                switch (Size)
-                {
-                    case Size.Small:
-                        return 1.59;
-                    case Size.Medium:
-                        return 2.10;
-                    case Size.Large:
-                        return 2.59;
-                    default:
-                        throw new NotImplementedException();
-                }
-            }
+            get { return lemon; }
+            set { lemon = value; }
         }
 
         private bool ice = true;
         /// <summary>
-        /// If the jerked soda comes with ice.
+        /// If the Texas Tea comes with ice.
         /// </summary>
         public override bool Ice
         {
@@ -71,7 +45,50 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// Gets the special instructions for the drink
+        /// Calories depending on size for Texas Tea
+        /// </summary>
+        public override uint Calories
+        {
+            get
+            {
+                //NEED TO FIGURE HALF OF AMOUNT FOR WITHOUT SWEETENER
+                switch (Size)
+                {
+                    case Size.Small:
+                        return 10;
+                    case Size.Medium:
+                        return 22;
+                    case Size.Large:
+                        return 36;
+                    default:
+                        throw new NotImplementedException();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Price depending on size for Texas Tea
+        /// </summary>
+        public override double Price
+        {
+            get
+            {
+                switch (Size)
+                {
+                    case Size.Small:
+                        return 1.00;
+                    case Size.Medium:
+                        return 1.50;
+                    case Size.Large:
+                        return 2.00;
+                    default:
+                        throw new NotImplementedException();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets the special instructions for the Texas Tea
         /// </summary>
         public override List<string> SpecialInstructions
         {
@@ -80,6 +97,7 @@ namespace CowboyCafe.Data
                 var instructions = new List<string>();
 
                 if (!ice) instructions.Add("hold ice");
+                if (lemon) instructions.Add("add lemon");
 
                 return instructions;
             }

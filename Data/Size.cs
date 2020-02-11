@@ -9,6 +9,9 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// A enumerator class for the size of entrees, sides, and drinks
+    /// </summary>
     public enum Size
     {
         Small,
