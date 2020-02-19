@@ -8,12 +8,15 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <Style TargetType="Button">
-            <Setter Property="Height" Value="50px"/>
-            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Height" Value="40px"/>
+            <Setter Property="Width" Value="175px"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="Margin" Value="3"/>
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="Background" Value="LightGray"/>
+
         </Style>
+
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -22,8 +25,14 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0">
-            <TextBlock TextAlignment="Center">Entree</TextBlock>
+        <StackPanel Grid.Column="0" Background="#FFC8B5C9">
+            <TextBlock TextAlignment="Center" Height="30" FontSize="20" FontFamily="Segoe UI" FontWeight="Normal" FontStyle="Normal">
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>
+                <TextBlock.Background>
+                    <ImageBrush/>
+                </TextBlock.Background>Entree</TextBlock>
             <Button Name="AddCompokeChiliButton">Cowpoke Chili</Button>
             <Button Name="AddRustlersRibsButton">Rustler's Ribs</Button>
             <Button Name="AddPecosPulledPorkButton">Pecos Pulled Pork</Button>
@@ -32,19 +41,29 @@
             <Button Name="AddTexasTripleBurgerButton">Texas Triple Burger</Button>
             <Button Name="AddAngryChickenButton">Angry Chicken</Button>
         </StackPanel>
-        <StackPanel Grid.Column="1">
-            <TextBlock TextAlignment="Center">Sides</TextBlock>
+        <StackPanel Grid.Column="1" Background="#FFC8B5C9">
+            <TextBlock TextAlignment="Center" Height="30" FontSize="20">
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>Sides</TextBlock>
             <Button Name="AddChiliCheeseFriesButton">Chili Cheese Fries</Button>
             <Button Name="AddCornDodgersButton">Corn Dodgers</Button>
             <Button Name="AddPanDeCampoButton">Pan de Campo</Button>
             <Button Name="AddBakedBeansButton">Baked Beans</Button>
         </StackPanel>
-        <StackPanel Grid.Column="2">
-            <TextBlock TextAlignment="Center">Drinks</TextBlock>
+        <StackPanel Grid.Column="2" Background="#FFC8B5C9">
+            <TextBlock TextAlignment="Center" Height="30" FontSize="20">
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>Drinks</TextBlock>
             <Button Name="AddJerkedSodaButton">Jerked Soda</Button>
             <Button Name="AddTexasTeaButton">Texas Tea</Button>
             <Button Name="AddCowboyCoffeeButton">Cowboy Coffee</Button>
             <Button Name="AddWaterButton">Water</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="3" Background="#FFC8B5C9">
+            <TextBlock TextAlignment="Center" Background="#FFC8B5C9" Height="30" FontSize="20">Order</TextBlock>
+            <ListView Name="OrderListView" Height="380" Width ="175" Background="LightGray" BorderBrush="Black"></ListView>
         </StackPanel>
     </Grid>
 </UserControl>
