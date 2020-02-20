@@ -27,7 +27,7 @@ namespace PointOfSale
             InitializeComponent();
             AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
             AddRustlersRibsButton.Click += OnAddRustlersRibsButtonClicked;
-            AddPecosPulledPorkButton.Click += OnAddRustlersRibsButtonClicked;
+            AddPecosPulledPorkButton.Click += OnAddPecosPulledPorkButtonClicked;
             AddTrailBurgerButton.Click += OnAddTrailBurgerButtonClicked;
             AddDakotaDoubleBurgerButton.Click += OnAddDakotaDoubleBurgerButtonClicked;
             AddTexasTripleBurgerButton.Click += OnAddTexasTripleBurgerButtonClicked;
