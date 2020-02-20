@@ -86,5 +86,24 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+        /// <summary>
+        /// Prints the string corresponding to the drink and size of the drink
+        /// </summary>
+        /// <returns>The string describing the water</returns>
+        public override string ToString()
+        {
+            if (Size == Size.Small)
+            {
+                return "Small Water";
+            }
+            else if (Size == Size.Medium)
+            {
+                return "Medium Water";
+            }
+            else
+            {
+                return "Large Water";
+            }
+        }
     }
 }

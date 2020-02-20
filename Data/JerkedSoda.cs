@@ -84,5 +84,80 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+        /// <summary>
+        /// Prints the string corresponding to the drink and size of the drink
+        /// </summary>
+        /// <returns>The string describing the water</returns>
+        public override string ToString()
+        {
+            switch (Size)
+            {
+                case Size.Small:
+                    if (Flavor == SodaFlavor.BirchBeer)
+                    {
+                        return "Small Birch Beer Jerked Soda";
+                    }
+                    else if (Flavor == SodaFlavor.CreamSoda)
+                    {
+                        return "Small Cream Soda Jerked Soda";
+                    }
+                    else if (Flavor == SodaFlavor.OrangeSoda)
+                    {
+                        return "Small Orange Soda Jerked Soda";
+                    }
+                    else if (Flavor == SodaFlavor.RootBeer)
+                    {
+                        return "Small Root Beer Jerked Soda";
+                    }
+                    else
+                    {
+                        return "Small Sarsparilla Soda";
+                    }
+                case Size.Medium:
+                    if (Flavor == SodaFlavor.BirchBeer)
+                    {
+                        return "Medium Birch Beer Jerked Soda";
+                    }
+                    else if (Flavor == SodaFlavor.CreamSoda)
+                    {
+                        return "Medium Cream Soda Jerked Soda";
+                    }
+                    else if (Flavor == SodaFlavor.OrangeSoda)
+                    {
+                        return "Medium Orange Soda Jerked Soda";
+                    }
+                    else if (Flavor == SodaFlavor.RootBeer)
+                    {
+                        return "Medium Root Beer Jerked Soda";
+                    }
+                    else
+                    {
+                        return "Medium Sarsparilla Soda";
+                    }
+                case Size.Large:
+                    if (Flavor == SodaFlavor.BirchBeer)
+                    {
+                        return "Large Birch Beer Jerked Soda";
+                    }
+                    else if (Flavor == SodaFlavor.CreamSoda)
+                    {
+                        return "Large Cream Soda Jerked Soda";
+                    }
+                    else if (Flavor == SodaFlavor.OrangeSoda)
+                    {
+                        return "Large Orange Soda Jerked Soda";
+                    }
+                    else if (Flavor == SodaFlavor.RootBeer)
+                    {
+                        return "Large Root Beer Jerked Soda";
+                    }
+                    else
+                    {
+                        return "Large Sarsparilla Soda";
+                    }
+                default:
+                    throw new NotImplementedException();
+            }
+        }
     }
 }

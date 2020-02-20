@@ -56,5 +56,24 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        /// <summary>
+        /// Prints the string corresponding to the side and size of the side
+        /// </summary>
+        /// <returns>The string describing the Chili Cheese Fries side</returns>
+        public override string ToString()
+        {
+            if (Size == Size.Small)
+            {
+                return "Small Chili Cheese Fries";
+            }
+            else if (Size == Size.Medium)
+            {
+                return "Medium Chili Cheese Fries";
+            }
+            else
+            {
+                return "Large Chili Cheese Fries";
+            }
+        }
     }
 }

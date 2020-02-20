@@ -55,5 +55,24 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        /// <summary>
+        /// Prints the string corresponding to the side and size of the side
+        /// </summary>
+        /// <returns>The string describing the Baked Beans side</returns>
+        public override string ToString()
+        {
+            if (Size == Size.Small)
+            {
+                return "Small Baked Beans";
+            }
+            else if (Size == Size.Medium)
+            {
+                return "Medium Baked Beans";
+            }
+            else
+            {
+                return "Large Baked Beans";
+            }
+        }
     }
 }

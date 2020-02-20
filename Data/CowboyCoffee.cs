@@ -102,5 +102,24 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+        /// <summary>
+        /// Prints the string corresponding to the drink and size of the drink
+        /// </summary>
+        /// <returns>The string describing the Cowboy Coffee</returns>
+        public override string ToString()
+        {
+            if (Size == Size.Small)
+            {
+                return "Small Cowboy Coffee";
+            }
+            else if (Size == Size.Medium)
+            {
+                return "Medium Cowboy Coffee";
+            }
+            else
+            {
+                return "Large Cowboy Coffee";
+            }
+        }
     }
 }
