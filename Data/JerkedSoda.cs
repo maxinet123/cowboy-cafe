@@ -111,7 +111,7 @@ namespace CowboyCafe.Data
                     }
                     else
                     {
-                        return "Small Sarsparilla Soda";
+                        return "Small Sarsparilla Jerked Soda";
                     }
                 case Size.Medium:
                     if (Flavor == SodaFlavor.BirchBeer)
@@ -132,7 +132,7 @@ namespace CowboyCafe.Data
                     }
                     else
                     {
-                        return "Medium Sarsparilla Soda";
+                        return "Medium Sarsparilla Jerked Soda";
                     }
                 case Size.Large:
                     if (Flavor == SodaFlavor.BirchBeer)
@@ -153,7 +153,7 @@ namespace CowboyCafe.Data
                     }
                     else
                     {
-                        return "Large Sarsparilla Soda";
+                        return "Large Sarsparilla Jerked Soda";
                     }
                 default:
                     throw new NotImplementedException();

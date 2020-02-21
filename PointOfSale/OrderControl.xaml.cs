@@ -25,7 +25,7 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
-            AddCowpokeChiliButton.Click += OnAddCowpokeChiliButton;
+            AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
             AddRustlersRibsButton.Click += OnAddRustlersRibsButtonClicked;
             AddPecosPulledPorkButton.Click += OnAddPecosPulledPorkButtonClicked;
             AddTrailBurgerButton.Click += OnAddTrailBurgerButtonClicked;
@@ -40,14 +40,13 @@ namespace PointOfSale
             AddTexasTeaButton.Click += OnAddTexasTeaButtonClicked;
             AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClicked;
             AddWaterButton.Click += OnAddWaterButtonClicked;
-
         }
         /// <summary>
         /// Button event for adding Cowpoke Chili
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void OnAddCowpokeChiliButton(object sender, RoutedEventArgs e)
+        void OnAddCowpokeChiliButtonClicked(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new CowpokeChili());
         }

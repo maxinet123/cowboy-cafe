@@ -109,17 +109,32 @@ namespace CowboyCafe.Data
         public override string ToString()
         {
             if (Size == Size.Small)
-            {
+            {   
+                if (decaf)
+                {
+                    return "Small Decaf Cowboy Coffee";
+                }
                 return "Small Cowboy Coffee";
             }
             else if (Size == Size.Medium)
             {
+                if (decaf)
+                {
+                    return "Medium Decaf Cowboy Coffee";
+
+                }
                 return "Medium Cowboy Coffee";
             }
             else
             {
+                if (decaf)
+                {
+                    return "Large Decaf Cowboy Coffee";
+
+                }
                 return "Large Cowboy Coffee";
             }
+
         }
     }
 }

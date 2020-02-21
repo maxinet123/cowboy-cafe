@@ -121,15 +121,27 @@ namespace CowboyCafe.Data
         {
             if (Size == Size.Small)
             {
-                return "Small Texas Tea";
+                if (sweet)
+                {
+                    return "Small Texas Sweet Tea";
+                }
+                return "Small Texas Plain Tea";
             }
             else if (Size == Size.Medium)
             {
-                return "Medium Texas Tea";
+                if (sweet)
+                {
+                    return "Medium Texas Sweet Tea";
+                }
+                return "Medium Texas Plain Tea";
             }
             else
             {
-                return "Large Texas Tea";
+                if (sweet)
+                {
+                    return "Large Texas Sweet Tea";
+                }
+                return "Large Texas Plain Tea";
             }
         }
     }
