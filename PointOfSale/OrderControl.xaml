@@ -24,15 +24,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style TargetType="ListView">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="ListView">
-                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderThickness="1"></Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
