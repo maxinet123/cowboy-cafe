@@ -61,18 +61,7 @@ namespace CowboyCafe.Data
         /// <returns>The string describing the Corn Dodgers side</returns>
         public override string ToString()
         {
-            if (Size == Size.Small)
-            {
-                return "Small Corn Dodgers";
-            }
-            else if (Size == Size.Medium)
-            {
-                return "Medium Corn Dodgers";
-            }
-            else
-            {
-                return "Large Corn Dodgers";
-            }
+            return Size + " Corn Dodgers";
         }
     }
 }

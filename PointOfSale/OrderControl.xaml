@@ -57,9 +57,7 @@
         </StackPanel>
         <StackPanel Grid.Column="3" Background="#FFEBE0F7">
             <TextBlock TextAlignment="Center"  Height="30" FontSize="20" FontWeight="Bold" Margin="3">Order</TextBlock>
-            <ListView Name="OrderListView" Height="380" Width ="175" Background="White" BorderBrush="DarkGray" Margin="8.5">
-                <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="DarkGray"></Border>
-            </ListView>
+            <ListView Name="OrderListView" Height="380" Width ="180" Background="White" BorderBrush="DarkGray" Margin="8.5"></ListView>
         </StackPanel>
     </Grid>
 </UserControl>

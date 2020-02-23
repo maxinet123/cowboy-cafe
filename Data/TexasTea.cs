@@ -119,30 +119,11 @@ namespace CowboyCafe.Data
         /// <returns>The string describing the Texas Tea</returns>
         public override string ToString()
         {
-            if (Size == Size.Small)
+            if (sweet)
             {
-                if (sweet)
-                {
-                    return "Small Texas Sweet Tea";
-                }
-                return "Small Texas Plain Tea";
+                return Size + " Texas Sweet Tea";
             }
-            else if (Size == Size.Medium)
-            {
-                if (sweet)
-                {
-                    return "Medium Texas Sweet Tea";
-                }
-                return "Medium Texas Plain Tea";
-            }
-            else
-            {
-                if (sweet)
-                {
-                    return "Large Texas Sweet Tea";
-                }
-                return "Large Texas Plain Tea";
-            }
+            return Size + " Texas Plain Tea";
         }
     }
 }

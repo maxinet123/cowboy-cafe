@@ -90,7 +90,22 @@ namespace CowboyCafe.Data
         /// <returns>The string describing the water</returns>
         public override string ToString()
         {
-            switch (Size)
+            switch (Flavor)
+            {
+                case SodaFlavor.BirchBeer:
+                    return Size + " Birch Beer Jerked Soda";
+                case SodaFlavor.CreamSoda:
+                    return Size + " Cream Soda Jerked Soda";
+                case SodaFlavor.OrangeSoda:
+                    return Size + " Orange Soda Jerked Soda";
+                case SodaFlavor.RootBeer:
+                    return Size + " Root Beer Jerked Soda";
+                case SodaFlavor.Sarsparilla:
+                    return Size + " Sarsparilla Jerked Soda";
+                default:
+                    throw new NotImplementedException();
+            }
+            /*switch (Size)
             {
                 case Size.Small:
                     if (Flavor == SodaFlavor.BirchBeer)
@@ -157,7 +172,7 @@ namespace CowboyCafe.Data
                     }
                 default:
                     throw new NotImplementedException();
-            }
+            }*/
         }
     }
 }

@@ -120,7 +120,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnAddCornDodgersButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new ChiliCheeseFries());
+            OrderListView.Items.Add(new CornDodgers());
         }
         /// <summary>
         /// Button event for adding Pan de Campo
@@ -129,7 +129,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnAddPanDeCampoButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new ChiliCheeseFries());
+            OrderListView.Items.Add(new PanDeCampo());
         }
         /// <summary>
         /// Button event for adding Baked Beans
@@ -138,7 +138,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnAddBakedBeansButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new ChiliCheeseFries());
+            OrderListView.Items.Add(new BakedBeans());
         }
         /// <summary>
         /// Button event for adding jerked soda
@@ -147,7 +147,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnAddJerkedSodaButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new ChiliCheeseFries());
+            OrderListView.Items.Add(new JerkedSoda());
         }
         /// <summary>
         /// Button event for adding tea
@@ -156,7 +156,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnAddTexasTeaButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new ChiliCheeseFries());
+            OrderListView.Items.Add(new TexasTea());
         }
         /// <summary>
         /// Button event for adding coffee
@@ -165,7 +165,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnAddCowboyCoffeeButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new ChiliCheeseFries());
+            OrderListView.Items.Add(new CowboyCoffee());
         }
         /// <summary>
         /// Button event for adding water
@@ -174,12 +174,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnAddWaterButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new ChiliCheeseFries());
-        }
-
-        private void AddCowpokeChiliButton_Click(object sender, RoutedEventArgs e)
-        {
-
+            OrderListView.Items.Add(new Water());
         }
     }
 }

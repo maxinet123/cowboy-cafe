@@ -92,18 +92,7 @@ namespace CowboyCafe.Data
         /// <returns>The string describing the water</returns>
         public override string ToString()
         {
-            if (Size == Size.Small)
-            {
-                return "Small Water";
-            }
-            else if (Size == Size.Medium)
-            {
-                return "Medium Water";
-            }
-            else
-            {
-                return "Large Water";
-            }
+            return Size + " Water";
         }
     }
 }

@@ -61,18 +61,7 @@ namespace CowboyCafe.Data
         /// <returns>The string describing the Pan de Campo side</returns>
         public override string ToString()
         {
-            if (Size == Size.Small)
-            {
-                return "Small Pan de Campo";
-            }
-            else if (Size == Size.Medium)
-            {
-                return "Medium Pan de Campo";
-            }
-            else
-            {
-                return "Large Pan de Campo";
-            }
+            return Size + " Pan de Campo";
         }
     }
 }
