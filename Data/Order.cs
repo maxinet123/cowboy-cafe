@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
 
-namespace PointOfSale
+namespace CowboyCafe.Data
 {
     public class Order : INotifyPropertyChanged
     {
@@ -15,20 +15,22 @@ namespace PointOfSale
 
         public IEnumerable<IOrderItem> Items => items.ToArray();
 
-        public double Subtotal { get; }
+        private double subtotal = 0;
+        public double Subtotal => subtotal;
 
         public uint OrderNumber { get; }
 
         public void Add(IOrderItem item)
         {
             items.Add(item);
-            //Subtotal += item.Price;
+            subtotal += item.Price;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
         }
 
         public void Remove(IOrderItem item)
         {
             items.Remove(item);
+            subtotal -= item.Price;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
         }
     }
