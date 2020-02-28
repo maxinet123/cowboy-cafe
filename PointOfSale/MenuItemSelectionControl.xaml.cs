@@ -14,14 +14,13 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for OrderSummaryControl.xaml
+    /// Interaction logic for MenuItemSelectionControl.xaml
     /// </summary>
-    public partial class OrderSummaryControl : UserControl
+    public partial class MenuItemSelectionControl : UserControl
     {
-        public OrderSummaryControl()
+        public MenuItemSelectionControl()
         {
             InitializeComponent();
         }
-        
     }
 }
