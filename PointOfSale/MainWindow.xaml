@@ -7,9 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="475" Width="800" ResizeMode="NoResize">
     <Grid>
-        <DockPanel>
-            <local:OrderSummaryControl DockPanel.Dock="Bottom"/>
-            <local:OrderControl/>
-        </DockPanel>
+        <local:OrderControl></local:OrderControl>
     </Grid>
 </Window>

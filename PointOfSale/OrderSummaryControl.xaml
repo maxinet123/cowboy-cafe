@@ -6,22 +6,28 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="380" d:DesignWidth="180">
+    <UserControl.Resources>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
+    </UserControl.Resources>
     <Grid>
-        <StackPanel>
-            <TextBlock Background="White">Order</TextBlock>
-            <ListView ItemsSource="{Binding Path=Items}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="25"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding Path=SubTotal, StringFormat=c}"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+        <TextBlock Background="White">Order</TextBlock>
+        <ListView ItemsSource="{Binding Path=Items}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel DockPanel.Dock ="Bottom">
+            <TextBlock>Subtotal:</TextBlock>
+            <TextBlock Text="{Binding Path=SubTotal, StringFormat=c}"/>
         </StackPanel>
     </Grid>
 </UserControl>
