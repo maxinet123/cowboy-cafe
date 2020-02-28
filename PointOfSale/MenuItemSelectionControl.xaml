@@ -55,12 +55,5 @@
             <Button Name="AddCowboyCoffeeButton">Cowboy Coffee</Button>
             <Button Name="AddWaterButton">Water</Button>
         </StackPanel>
-        <StackPanel Grid.Column="3" Background="#FFEBE0F7">
-            <TextBlock TextAlignment="Center"  Height="30" FontSize="20" FontWeight="Bold" Margin="2">Order</TextBlock>
-            <DockPanel>
-                <local:OrderSummaryControl/>
-            </DockPanel>
-            <!--<ListView Name="OrderListView" Height="400" Width ="185" Background="White" BorderBrush="DarkGray" Margin="8.5" ItemsSource="{Binding Path = Items}"/>-->
-        </StackPanel>
     </Grid>
 </UserControl>
