@@ -6,7 +6,61 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="40px"/>
+            <Setter Property="Width" Value="175px"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="8.3"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="DarkGray">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Background="#FFEBE0F7">
+            <TextBlock TextAlignment="Center" Height="30" FontSize="20" FontWeight="Bold" Margin="3">Entree</TextBlock>
+            <Button Name="AddCowpokeChiliButton" >Cowpoke Chili</Button>
+            <Button Name="AddRustlersRibsButton">Rustler's Ribs</Button>
+            <Button Name="AddPecosPulledPorkButton">Pecos Pulled Pork</Button>
+            <Button Name="AddTrailBurgerButton">Trail Burger</Button>
+            <Button Name="AddDakotaDoubleBurgerButton">Dakota Double Burger</Button>
+            <Button Name="AddTexasTripleBurgerButton">Texas Triple Burger</Button>
+            <Button Name="AddAngryChickenButton">Angry Chicken</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Background="#FFEBE0F7">
+            <TextBlock TextAlignment="Center" Height="30" FontSize="20" FontWeight="Bold" Margin="3">Sides</TextBlock>
+            <Button Name="AddChiliCheeseFriesButton">Chili Cheese Fries</Button>
+            <Button Name="AddCornDodgersButton">Corn Dodgers</Button>
+            <Button Name="AddPanDeCampoButton">Pan de Campo</Button>
+            <Button Name="AddBakedBeansButton">Baked Beans</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Background="#FFEBE0F7">
+            <TextBlock TextAlignment="Center" Height="30" FontSize="20" FontWeight="Bold" Margin="3">Drinks</TextBlock>
+            <Button Name="AddJerkedSodaButton">Jerked Soda</Button>
+            <Button Name="AddTexasTeaButton">Texas Tea</Button>
+            <Button Name="AddCowboyCoffeeButton">Cowboy Coffee</Button>
+            <Button Name="AddWaterButton">Water</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="3" Background="#FFEBE0F7">
+            <TextBlock TextAlignment="Center"  Height="30" FontSize="20" FontWeight="Bold" Margin="2">Order</TextBlock>
+            <DockPanel>
+                <local:OrderSummaryControl/>
+            </DockPanel>
+            <!--<ListView Name="OrderListView" Height="400" Width ="185" Background="White" BorderBrush="DarkGray" Margin="8.5" ItemsSource="{Binding Path = Items}"/>-->
+        </StackPanel>
     </Grid>
 </UserControl>

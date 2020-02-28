@@ -9,7 +9,7 @@ namespace CowboyCafe.Data
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private uint lastOrderNumber;
+        static private uint lastOrderNumber = 0;
 
         private List<IOrderItem> items = new List<IOrderItem>();
 
@@ -18,7 +18,7 @@ namespace CowboyCafe.Data
         private double subtotal = 0;
         public double Subtotal => subtotal;
 
-        public uint OrderNumber { get; }
+        public uint OrderNumber => lastOrderNumber++;
 
         public void Add(IOrderItem item)
         {

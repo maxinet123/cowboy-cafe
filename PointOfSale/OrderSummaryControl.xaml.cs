@@ -18,10 +18,10 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderSummaryControl : UserControl
     {
+        
         public OrderSummaryControl()
         {
             InitializeComponent();
         }
-        
     }
 }
