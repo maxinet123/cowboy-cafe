@@ -33,6 +33,7 @@ namespace CowboyCafe.Data
         public void Add(IOrderItem item)
         {
             items.Add(item);
+            //Subtotal += item.Price;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
 

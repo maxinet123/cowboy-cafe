@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="545" d:DesignWidth="300">
+             d:DesignHeight="600" d:DesignWidth="300">
     <UserControl.Resources>
         <Style TargetType="ListBoxItem">
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -13,27 +13,28 @@
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="520"/>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0">
-            <TextBlock Background="White" FontSize="16" FontWeight="Bold" Text="{Binding Path=OrderNumberString}"></TextBlock>
+        <TextBlock Grid.Row="0" Background="White" FontSize="16" FontWeight="Bold" Text="{Binding Path=OrderNumberString}"></TextBlock>
+        <StackPanel Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto">
             <ListBox ItemsSource="{Binding Path=Items}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
-                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding}"/>
-                            <TextBlock Text="{Binding Path=Price, StringFormat=c}" HorizontalAlignment="Right"/>
+                            <TextBlock Grid.Column ="0" Text="{Binding}"/>
+                            <TextBlock Grid.Column="1" Text="{Binding Path=Price, StringFormat=c}" HorizontalAlignment="Right"/>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
-        <StackPanel Grid.Row="1" Background="White">
+        <StackPanel Grid.Row="2" Background="White">
             <TextBlock Background="White" FontSize="16" FontWeight="Bold">Subtotal</TextBlock>
             <TextBlock Text="{Binding Path=Subtotal, StringFormat=c}" HorizontalAlignment="Right"/>
         </StackPanel>

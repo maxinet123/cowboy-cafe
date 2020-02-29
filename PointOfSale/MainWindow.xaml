@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointOfSale"
         mc:Ignorable="d"
-        Title="MainWindow" Height="585" Width="900" ResizeMode="NoResize">
-    <Grid Height="554">
+        Title="MainWindow" Height="600" Width="900" ResizeMode="NoResize">
+    <Grid>
         <Grid.Background>
             <ImageBrush ImageSource= "C:\Users\Maxine\Desktop\cowboy-cafe\Background\cafe.jpg"
                         AlignmentY="Top" AlignmentX="Center" Opacity=".75" />
