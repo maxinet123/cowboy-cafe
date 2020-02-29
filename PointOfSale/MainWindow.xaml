@@ -8,8 +8,7 @@
         Title="MainWindow" Height="600" Width="900" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource= "C:\Users\Maxine\Desktop\cowboy-cafe\Background\cafe.jpg"
-                        AlignmentY="Top" AlignmentX="Center" Opacity=".75" />
+            <ImageBrush ImageSource= "https://i.vimeocdn.com/video/188847774_640.jpg" AlignmentY="Top" AlignmentX="Left" Stretch="UniformToFill"/>
         </Grid.Background>
         <DockPanel>
             <local:OrderControl/>

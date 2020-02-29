@@ -42,7 +42,7 @@ namespace PointOfSale
         }
         void OnItemSelectionButtonClicked(object sender, RoutedEventArgs e)
         {
-            DataContext = new Order();
+
         }
     }
 }
