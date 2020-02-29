@@ -5,19 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="580" d:DesignWidth="500" HorizontalAlignment="Right">
-    <!--<UserControl.Resources>
+             d:DesignHeight="545" d:DesignWidth="300">
+    <UserControl.Resources>
         <Style TargetType="ListBoxItem">
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         </Style>
-    </UserControl.Resources>-->
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="540"/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="520"/>
+            <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
-        <StackPanel Height="580" Width="200" Grid.Row="0">
-            <TextBlock Background="White">Order</TextBlock>
+        <StackPanel Grid.Row="0">
+            <TextBlock Background="White" FontSize="16" FontWeight="Bold" Text="{Binding Path=OrderNumberString}"></TextBlock>
             <ListBox ItemsSource="{Binding Path=Items}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -27,14 +27,15 @@
                                 <ColumnDefinition Width="25"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="{Binding}"/>
+                            <TextBlock Text="{Binding Path=Price, StringFormat=c}" HorizontalAlignment="Right"/>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <TextBlock Background="White">Subtotal</TextBlock>
         </StackPanel>
-        <StackPanel Grid.Row="1">
-            
+        <StackPanel Grid.Row="1" Background="White">
+            <TextBlock Background="White" FontSize="16" FontWeight="Bold">Subtotal</TextBlock>
+            <TextBlock Text="{Binding Path=Subtotal, StringFormat=c}" HorizontalAlignment="Right"/>
         </StackPanel>
     </Grid>
 </UserControl>

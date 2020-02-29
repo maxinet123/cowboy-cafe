@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointOfSale"
         mc:Ignorable="d"
-        Title="MainWindow" Height="580" Width="800" ResizeMode="NoResize">
+        Title="MainWindow" Height="585" Width="900" ResizeMode="NoResize">
     <Grid Height="554">
+        <Grid.Background>
+            <ImageBrush ImageSource= "C:\Users\Maxine\Desktop\cowboy-cafe\Background\cafe.jpg"
+                        AlignmentY="Top" AlignmentX="Center" Opacity=".75" />
+        </Grid.Background>
         <DockPanel>
-            <local:OrderControl Height="645"/>
+            <local:OrderControl/>
         </DockPanel>
-
     </Grid>
 </Window>

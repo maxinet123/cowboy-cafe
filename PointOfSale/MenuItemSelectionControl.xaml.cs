@@ -48,7 +48,6 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 order.Add(new CowpokeChili());
-
             }
         }
         /// <summary>
