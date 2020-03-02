@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A interface class for orders
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

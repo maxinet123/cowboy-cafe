@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class representing the buttons for the MenuItemSelectionControl xaml
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -19,6 +24,9 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuItemSelectionControl : UserControl
     {
+        /// <summary>
+        /// Initializes components and all the button event handlers for the xaml
+        /// </summary>
         public MenuItemSelectionControl()
         {
             InitializeComponent();
@@ -39,7 +47,7 @@ namespace PointOfSale
             AddWaterButton.Click += OnAddWaterButtonClicked;
         }
         /// <summary>
-        /// Button event for adding Cowpoke Chili
+        /// Button event for adding Cowpoke Chili. Updates with the DataContext of the order.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -51,7 +59,7 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// Button event for adding Rustlers ribs
+        /// Button event for adding Rustlers ribs. Updates with the DataContext of the order.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -63,7 +71,7 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// Button event for adding Pecos Pulled Pork
+        /// Button event for adding Pecos Pulled Pork. Updates with the DataContext of the order.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -75,7 +83,7 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// Button event for adding Trail Burger
+        /// Button event for adding Trail Burger. Updates with the DataContext of the order.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -87,7 +95,7 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// Button event for adding Dakota Double Burger
+        /// Button event for adding Dakota Double Burger. Updates with the DataContext of the order.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -99,7 +107,7 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// Button event for adding Texas Triple Burger
+        /// Button event for adding Texas Triple Burger. Updates with the DataContext of the order.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -111,7 +119,7 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// Button event for adding Angry Chicken
+        /// Button event for adding Angry Chicken. Updates with the DataContext of the order.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -123,7 +131,7 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// Button event for adding Chili Cheese Fries
+        /// Button event for adding Chili Cheese Fries. Updates with the DataContext of the order.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -135,7 +143,7 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// Button event for adding Corn Dodgers
+        /// Button event for adding Corn Dodgers. Updates with the DataContext of the order.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -147,7 +155,7 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// Button event for adding Pan de Campo
+        /// Button event for adding Pan de Campo. Updates with the DataContext of the order.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -160,7 +168,7 @@ namespace PointOfSale
 
         }
         /// <summary>
-        /// Button event for adding Baked Beans
+        /// Button event for adding Baked Beans. Updates with the DataContext of the order.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -172,7 +180,7 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// Button event for adding jerked soda
+        /// Button event for adding jerked soda. Updates with the DataContext of the order.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -183,12 +191,22 @@ namespace PointOfSale
                 order.Add(new JerkedSoda());
             }
         }
+        /// <summary>
+        /// Button event for adding texas tea. Updates with the DataContext of the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void OnAddTexasTeaButtonClicked(object sender, RoutedEventArgs e)
         {
             if (DataContext is Order order)
             {
                 order.Add(new TexasTea());
             }
+            /// <summary>
+            /// Button event for adding cowboy coffee. Updates with the DataContext of the order.
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
         }
         void OnAddCowboyCoffeeButtonClicked(object sender, RoutedEventArgs e)
         {
@@ -197,6 +215,11 @@ namespace PointOfSale
                 order.Add(new CowboyCoffee());
             }
         }
+        /// <summary>
+        /// Button event for adding water. Updates with the DataContext of the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void OnAddWaterButtonClicked(object sender, RoutedEventArgs e)
         {
             if (DataContext is Order order)

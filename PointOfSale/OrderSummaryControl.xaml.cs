@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class representing the buttons for the OrderSummaryControl xaml
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,7 +23,9 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderSummaryControl : UserControl
     {
-        
+        /// <summary>
+        /// Intializes all components of the xaml
+        /// </summary>
         public OrderSummaryControl()
         {
             InitializeComponent();

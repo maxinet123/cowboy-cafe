@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class representing the buttons for the OrderControl xaml
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -32,14 +37,29 @@ namespace PointOfSale
             OnItemSelectionButton.Click += OnItemSelectionButtonClicked;
 
         }
+        /// <summary>
+        /// Button event for Cancelling an order. Sets DataContext to a new instance.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void OnCancelOrderButtonClicked(object sender, RoutedEventArgs e)
         {
             DataContext = new Order();
         }
+        /// <summary>
+        /// Button event for completeing an order. Sets DataContext to a new instance.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void OnCompleteOrderButtonClicked(object sender, RoutedEventArgs e)
         {
             DataContext = new Order();
         }
+        /// <summary>
+        /// Button event for modifying items.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void OnItemSelectionButtonClicked(object sender, RoutedEventArgs e)
         {
 
