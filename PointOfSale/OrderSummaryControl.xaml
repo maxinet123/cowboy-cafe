@@ -17,7 +17,7 @@
             <RowDefinition/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Background="White" FontSize="16" FontWeight="Bold" Text="{Binding Path=OrderNumberString}"></TextBlock>
+        <TextBlock Grid.Row="0" Background="#FFDB899D" FontSize="16" FontWeight="Bold" Text="{Binding Path=OrderNumberString}"></TextBlock>
         <StackPanel Grid.Row="1"  ScrollViewer.VerticalScrollBarVisibility="Auto">
             <ListBox ItemsSource="{Binding Path=Items}" Height="541" Opacity=".8">
                 <ListBox.ItemTemplate>
@@ -34,9 +34,9 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
-        <StackPanel Grid.Row="2" Background="White">
-            <TextBlock Background="White" FontSize="16" FontWeight="Bold">Subtotal:</TextBlock>
-            <TextBlock Text="{Binding Path=Subtotal, StringFormat=c}" HorizontalAlignment="Right" FontSize="14"/>
+        <StackPanel Grid.Row="2" Background="#FFDB899D">
+            <!--<TextBlock Background="White" FontSize="16" FontWeight="Bold">Subtotal:</TextBlock>-->
+            <TextBlock Text="{Binding Path=Subtotal, StringFormat={} Subtotal: {0:c}}" FontWeight="Bold"  FontSize="16" />
         </StackPanel>
     </Grid>
 </UserControl>
