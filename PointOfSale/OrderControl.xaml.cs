@@ -44,7 +44,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnCancelOrderButtonClicked(object sender, RoutedEventArgs e)
         {
-            DataContext = new Order();
+            this.DataContext = new Order();
         }
         /// <summary>
         /// Button event for completeing an order. Sets DataContext to a new instance.
@@ -53,7 +53,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnCompleteOrderButtonClicked(object sender, RoutedEventArgs e)
         {
-            DataContext = new Order();
+            this.DataContext = new Order();
         }
         /// <summary>
         /// Button event for modifying items.
