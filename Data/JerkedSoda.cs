@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
@@ -14,10 +15,38 @@ namespace CowboyCafe.Data
     /// </summary>
     public class JerkedSoda : Drink
     {
+        public override event PropertyChangedEventHandler PropertyChanged;
+
+        private Size size = Size.Small;
+        public override Size Size 
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+            }
+        }
+
+        private SodaFlavor flavor = SodaFlavor.BirchBeer;
         /// <summary>
         /// Gets the flavor of the soda
         /// </summary>
-        public SodaFlavor Flavor { get; set; }
+        public SodaFlavor Flavor 
+        {
+            get
+            {
+                return flavor;
+            }
+            set
+            {
+                flavor = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Flavor"));
+            }
+        }
 
         /// <summary>
         /// Calories depending on size for Jerked Soda

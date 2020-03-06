@@ -6,6 +6,7 @@
 */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
@@ -14,6 +15,7 @@ namespace CowboyCafe.Data
     /// </summary>
     public class CowpokeChili : Entree
     {
+        public override event PropertyChangedEventHandler PropertyChanged;
         private bool cheese = true;
         /// <summary>
         /// If the chili is topped with cheese
@@ -21,7 +23,11 @@ namespace CowboyCafe.Data
         public bool Cheese
         {
             get { return cheese; }
-            set { cheese = value; }
+            set 
+            { 
+                cheese = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
+            }
         }
 
         private bool sourCream = true;
@@ -31,7 +37,11 @@ namespace CowboyCafe.Data
         public bool SourCream
         {
             get { return sourCream; }
-            set { sourCream = value; }
+            set 
+            { 
+                sourCream = value; 
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SourCream"));
+            }
         }
 
         private bool greenOnions = true;
@@ -41,17 +51,28 @@ namespace CowboyCafe.Data
         public bool GreenOnions
         {
             get { return greenOnions; }
-            set { greenOnions = value; }
+            set 
+            { 
+                greenOnions = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GreenOnions"));
+
+            }
         }
 
         private bool tortillaStrips = true;
+
         /// <summary>
         /// If the chili is topped with tortilla strips
         /// </summary>
         public bool TortillaStrips
         {
             get { return tortillaStrips; }
-            set { tortillaStrips = value; }
+            set 
+            { 
+                tortillaStrips = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TorillaStrips"));
+
+            }
         }
 
         /// <summary>

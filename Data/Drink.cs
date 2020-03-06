@@ -6,13 +6,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A base class representing a drink
     /// </summary>
-    public abstract class Drink : IOrderItem
+    public abstract class Drink : IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Gets the price of the drink
@@ -38,6 +39,11 @@ namespace CowboyCafe.Data
         /// Gets the bool for ice in the drink
         /// </summary>
         public virtual bool Ice { get; set; } = true;
+
+        /// <summary>
+        /// Property that is triggered when something has changed and updates everything
+        /// </summary>
+        public abstract event PropertyChangedEventHandler PropertyChanged;
     }
 
 }

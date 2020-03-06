@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="350">
+             d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel Background="White" Opacity=".8">
         <TextBlock Width ="700" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Cowpoke Chili" />
         <StackPanel Orientation="Horizontal" >
@@ -23,9 +23,6 @@
         <StackPanel Orientation="Horizontal" >
             <CheckBox IsChecked="{Binding Path= TortillaStrips}" Margin ="10" VerticalAlignment="Center" Name="TortillaStripsChecked"/>
             <Label FontSize="18">Tortilla Strips</Label>
-        </StackPanel>
-        <StackPanel VerticalAlignment="Bottom">
-            <Button x:Name="BackButton">Back</Button>
         </StackPanel>
     </StackPanel>
 </UserControl>

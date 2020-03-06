@@ -6,13 +6,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A base class representing a side
     /// </summary>
-    public abstract class Side : IOrderItem
+    public abstract class Side : IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Gets the size of the side
@@ -33,5 +34,10 @@ namespace CowboyCafe.Data
         /// Returns an empty list is there are no secial instrictions
         /// </summary>
         public List<string> SpecialInstructions => new List<string>();
+
+        /// <summary>
+        /// Property that is triggered when something has changed and updates everything
+        /// </summary>
+        public abstract event PropertyChangedEventHandler PropertyChanged;
     }
 }

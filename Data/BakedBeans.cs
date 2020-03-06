@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
@@ -14,6 +15,21 @@ namespace CowboyCafe.Data
     /// </summary>
     public class BakedBeans : Side
     {
+        public override event PropertyChangedEventHandler PropertyChanged;
+
+        private Size size = Size.Small;
+        public override Size Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+            }
+        }
         /// <summary>
         /// Calories depending on size for Baked Beans
         /// </summary>

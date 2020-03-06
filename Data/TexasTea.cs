@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
@@ -14,6 +15,22 @@ namespace CowboyCafe.Data
     /// </summary>
     public class TexasTea : Drink
     {
+        public override event PropertyChangedEventHandler PropertyChanged;
+
+        private Size size = Size.Small;
+        public override Size Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+            }
+        }
+
         private bool sweet = true;
         /// <summary>
         /// If the Texas Tea is sweet
@@ -21,7 +38,11 @@ namespace CowboyCafe.Data
         public bool Sweet
         {
             get { return sweet; }
-            set { sweet = value; }
+            set 
+            { 
+                sweet = value; 
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sweet"));
+            }
         }
 
         private bool lemon = false;
@@ -31,7 +52,11 @@ namespace CowboyCafe.Data
         public bool Lemon
         {
             get { return lemon; }
-            set { lemon = value; }
+            set 
+            { 
+                lemon = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lemon"));
+            }
         }
 
         private bool ice = true;
@@ -41,7 +66,11 @@ namespace CowboyCafe.Data
         public override bool Ice
         {
             get { return ice; }
-            set { ice = value; }
+            set 
+            { 
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+            }
         }
 
         /// <summary>
