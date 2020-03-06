@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="PointOfSale.CustomizeJerkedSoda"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="350">
+    <StackPanel Background="White" Opacity=".8">
+        <TextBlock Width ="700" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Cowpoke Chili" />
+        <TextBlock FontSize="18" FontWeight="DemiBold" Text="Size:"/>
+        <StackPanel Orientation="Horizontal" >
+            <CheckBox IsChecked="{Binding Path= Size.Small}" Margin="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Small</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox IsChecked="{Binding Path= Size.Medium}" Margin ="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Medium</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" >
+            <CheckBox IsChecked="{Binding Path= Size.Large}" Margin ="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Large</Label>
+        </StackPanel>
+        <TextBlock FontSize="18" FontWeight="DemiBold" Text="Soda Flavor:"/>
+        <StackPanel Orientation="Horizontal" >
+            <CheckBox IsChecked="{Binding Path= SodaFlavor.BirchBeer}" Margin ="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Birch Beer</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" >
+            <CheckBox IsChecked="{Binding Path= SodaFlavor.CreamSoda}" Margin ="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Cream Soda</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" >
+            <CheckBox IsChecked="{Binding Path= SodaFlavor.OrangeSoda}" Margin ="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Orange Soda</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" >
+            <CheckBox IsChecked="{Binding Path= SodaFlavor.RootBeer}" Margin ="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Root Beer</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox IsChecked="{Binding Path= SodaFlavor.Sarsparilla}" Margin ="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Sarsparilla</Label>
+        </StackPanel>
+        <TextBlock FontSize ="18" FontWeight="DemiBold" Text="Other:"/>
+        <StackPanel Orientation="Horizontal" >
+            <CheckBox IsChecked="{Binding Path= Ice}" Margin ="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Ice</Label>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

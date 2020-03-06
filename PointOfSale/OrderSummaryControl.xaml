@@ -35,7 +35,6 @@
             </ListBox>
         </StackPanel>
         <StackPanel Grid.Row="2" Background="#FFDB899D">
-            <!--<TextBlock Background="White" FontSize="16" FontWeight="Bold">Subtotal:</TextBlock>-->
             <TextBlock Text="{Binding Path=Subtotal, StringFormat={} Subtotal: {0:c}}" FontWeight="Bold"  FontSize="16" />
         </StackPanel>
     </Grid>

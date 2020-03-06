@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.CustomizeCowpokeChili"
+﻿<UserControl x:Class="PointOfSale.CustomizeTrailBurger"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,25 +7,26 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="350">
     <StackPanel Background="White" Opacity=".8">
-        <TextBlock Width ="700" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Cowpoke Chili" />
+        <TextBlock Width ="700" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Trail Burger" />
+        <StackPanel Orientation="Horizontal" >
+            <CheckBox IsChecked="{Binding Path= Bun}" Margin="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Bun</Label>
+        </StackPanel>
         <StackPanel Orientation="Horizontal" >
             <CheckBox IsChecked="{Binding Path= Cheese}" Margin="10" VerticalAlignment="Center"/>
             <Label FontSize="18">Cheese</Label>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path= SourCream}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Sour Cream</Label>
+            <CheckBox IsChecked="{Binding Path= Ketchup}" Margin ="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Ketchup</Label>
         </StackPanel>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= GreenOnions}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Green Onions</Label>
+            <CheckBox IsChecked="{Binding Path= Mustard}" Margin ="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Mustard</Label>
         </StackPanel>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= TortillaStrips}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Tortilla Strips</Label>
-        </StackPanel>
-        <StackPanel VerticalAlignment="Bottom">
-            <Button x:Name="BackButton">Back</Button>
+            <CheckBox IsChecked="{Binding Path= Pickle}" Margin ="10" VerticalAlignment="Center"/>
+            <Label FontSize="18">Pickle</Label>
         </StackPanel>
     </StackPanel>
 </UserControl>
