@@ -21,6 +21,11 @@ namespace PointOfSale
         public CustomizeCowpokeChili()
         {
             InitializeComponent();
+            
+        }
+        private void AddToInstructions()
+        {
+            
         }
     }
 }
