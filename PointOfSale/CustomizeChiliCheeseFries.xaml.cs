@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CowboyCafe.Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,62 @@ namespace PointOfSale
         public CustomizeChiliCheeseFries()
         {
             InitializeComponent();
+            
         }
+        private void OnSizeChanged(object sender, EventArgs e)
+        {
+            SideSizeChanged();
+        }
+
+        private void SideSizeChanged() { 
+            if (DataContext is Side side)
+            {
+                switch (side.Size)
+                {
+                    default:
+                    case CowboyCafe.Data.Size.Small:
+                        SizeSmall.IsChecked = true;
+                        SizeMedium.IsChecked = false;
+                        SizeLarge.IsChecked = false;
+                        break;
+                    case CowboyCafe.Data.Size.Medium:
+                        SizeMedium.IsChecked = true;
+                        SizeSmall.IsChecked = false;
+                        SizeLarge.IsChecked = false;
+                        break;
+                    case CowboyCafe.Data.Size.Large:
+                        SizeLarge.IsChecked = true;
+                        SizeSmall.IsChecked = false;
+                        SizeMedium.IsChecked = false;
+                        break;
+                }
+            }
+        }
+        private void SizeButtonClicked(object sender, EventArgs e)
+        {
+            if(sender is Button button)
+            {
+                if (DataContext is Side side)
+                {
+                    switch (button.Name)
+                    {
+                        default:
+                        case "SizeSmall":
+                            side.Size = CowboyCafe.Data.Size.Small;
+                            SideSizeChanged();
+                            break;
+                        case "SizeMedium":
+                            side.Size = CowboyCafe.Data.Size.Medium;
+                            SideSizeChanged();
+                            break;
+                        case "SizeLarge":
+                            side.Size = CowboyCafe.Data.Size.Large;
+                            SideSizeChanged();
+                            break;
+                    }
+                }
+            }
+        }
+       
     }
 }

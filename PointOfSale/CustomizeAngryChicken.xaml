@@ -9,12 +9,10 @@
     <StackPanel Background="White" Opacity=".8">
         <TextBlock Width ="700" HorizontalAlignment="Left" FontSize="24" Text="Customize Angry Chicken" />
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path= Bread}" Margin="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Bread</Label>
+            <CheckBox IsChecked="{Binding Path= Bread}" Margin="10" FontSize ="18" VerticalAlignment="Center">Bread</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path= Pickle}" Margin="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Pickle</Label>
+            <CheckBox IsChecked="{Binding Path= Pickle}" Margin="10" VerticalAlignment="Center" FontSize="18">Pickle</CheckBox>
         </StackPanel>
     </StackPanel>
 </UserControl>

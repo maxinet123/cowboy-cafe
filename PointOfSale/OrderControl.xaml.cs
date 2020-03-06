@@ -45,6 +45,7 @@ namespace PointOfSale
         void OnCancelOrderButtonClicked(object sender, RoutedEventArgs e)
         {
             this.DataContext = new Order();
+            Container.Child = new MenuItemSelectionControl();
         }
         /// <summary>
         /// Button event for completeing an order. Sets DataContext to a new instance.
@@ -54,16 +55,21 @@ namespace PointOfSale
         void OnCompleteOrderButtonClicked(object sender, RoutedEventArgs e)
         {
             this.DataContext = new Order();
+            Container.Child = new MenuItemSelectionControl();
         }
         /// <summary>
-        /// Button event for modifying items.
+        /// Button event swaps back to the MenuItemSelecetionControl
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         void OnItemSelectionButtonClicked(object sender, RoutedEventArgs e)
         {
-
+            Container.Child = new MenuItemSelectionControl();
         }
+        /// <summary>
+        /// Swaps screens into customizations
+        /// </summary>
+        /// <param name="element"></param>
         public void SwapScreen(UIElement element)
         {
             Container.Child = element;

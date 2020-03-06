@@ -9,15 +9,15 @@
     <StackPanel Background="White" Opacity=".8">
         <TextBlock Width ="700" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Pan de Campo" />
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Size.Small}" Margin="10" VerticalAlignment="Center"/>
+            <CheckBox IsChecked="{Binding Path= Size}" Margin="10" VerticalAlignment="Center"/>
             <Label FontSize="18">Small</Label>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path= Size.Medium}" Margin ="10" VerticalAlignment="Center"/>
+            <CheckBox IsChecked="{Binding Path= Size}" Margin ="10" VerticalAlignment="Center"/>
             <Label FontSize="18">Medium</Label>
         </StackPanel>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Size.Large}" Margin ="10" VerticalAlignment="Center"/>
+            <CheckBox IsChecked="{Binding Path= Size}" Margin ="10" VerticalAlignment="Center"/>
             <Label FontSize="18">Large</Label>
         </StackPanel>
     </StackPanel>

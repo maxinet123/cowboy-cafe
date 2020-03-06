@@ -31,7 +31,15 @@ namespace CowboyCafe.Data
         /// Gets the special instructions for the entree
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+        /// <summary>
+        /// Implements interface for Property Changed events
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        public abstract event PropertyChangedEventHandler PropertyChanged;
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+        }
     }
 }

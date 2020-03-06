@@ -10,12 +10,10 @@
         <TextBlock Width ="700" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Pecos Pulled Pork" />
         <TextBlock FontSize="18" Text=" Choose Toppings:"/>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Bread}" Margin="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Bread</Label>
+            <CheckBox IsChecked="{Binding Path= Bread}" Margin="10" VerticalAlignment="Center" FontSize="18">Bread</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path= Pickle}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Pickle</Label>
+            <CheckBox IsChecked="{Binding Path= Pickle}" Margin ="10" VerticalAlignment="Center" FontSize="18">Pickle</CheckBox>
         </StackPanel>
     </StackPanel>
 </UserControl>

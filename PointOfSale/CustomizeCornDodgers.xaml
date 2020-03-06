@@ -9,16 +9,13 @@
     <StackPanel Background="White" Opacity=".8">
         <TextBlock Width ="700" FontWeight ="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Corn Dodgers" />
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Size.Small}" Margin="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Small</Label>
+            <CheckBox IsChecked="{Binding Path= Size}" Margin="10" FontSize="18" VerticalAlignment="Center">Small</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path= Size.Medium}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Medium</Label>
+            <CheckBox IsChecked="{Binding Path= Size}" Margin ="10" VerticalAlignment="Center" FontSize="18">Medium</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Size.Large}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Large</Label>
+            <CheckBox IsChecked="{Binding Path= Size}" Margin ="10" VerticalAlignment="Center" FontSize="18">Large</CheckBox>
         </StackPanel>
     </StackPanel>
 </UserControl>

@@ -15,21 +15,7 @@ namespace CowboyCafe.Data
     /// </summary>
     public class BakedBeans : Side
     {
-        public override event PropertyChangedEventHandler PropertyChanged;
 
-        private Size size = Size.Small;
-        public override Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
-            }
-        }
         /// <summary>
         /// Calories depending on size for Baked Beans
         /// </summary>
@@ -71,13 +57,16 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
+        public override Size Size { get; set; }
+
         /// <summary>
         /// Prints the string corresponding to the side and size of the side
         /// </summary>
         /// <returns>The string describing the Baked Beans side</returns>
         public override string ToString()
         {
-            return Size + " Baked Beans";
+            return this.Size + " Baked Beans";
         }
     }
 }

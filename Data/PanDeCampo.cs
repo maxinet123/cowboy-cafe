@@ -15,20 +15,7 @@ namespace CowboyCafe.Data
     /// </summary>
     public class PanDeCampo : Side
     {
-        public override event PropertyChangedEventHandler PropertyChanged;
-        private Size size = Size.Small;
-        public override Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
-            }
-        }
+        public override Size Size { get; set; }
 
         /// <summary>
         /// Calories depending on size for Pan De Campo

@@ -9,24 +9,19 @@
     <StackPanel Background="White" Opacity=".8">
         <TextBlock Width ="700" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Trail Burger" />
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Bun}" Margin="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Bun</Label>
+            <CheckBox IsChecked="{Binding Path= Bun}" Margin="10" VerticalAlignment="Center" FontSize="18">Bun</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Cheese}" Margin="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Cheese</Label>
+            <CheckBox IsChecked="{Binding Path= Cheese}" Margin="10" VerticalAlignment="Center" FontSize="18">Cheese</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path= Ketchup}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Ketchup</Label>
+            <CheckBox IsChecked="{Binding Path= Ketchup}" Margin ="10" VerticalAlignment="Center" FontSize="18">Ketchup</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Mustard}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Mustard</Label>
+            <CheckBox IsChecked="{Binding Path= Mustard}" Margin ="10" VerticalAlignment="Center" FontSize="18">Mustard</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Pickle}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Pickle</Label>
+            <CheckBox IsChecked="{Binding Path= Pickle}" Margin ="10" VerticalAlignment="Center" FontSize="18">Pickle</CheckBox>
         </StackPanel>
     </StackPanel>
 </UserControl>

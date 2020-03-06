@@ -17,7 +17,7 @@
             <RowDefinition/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Background="#FFDB899D" FontSize="16" FontWeight="Bold" Text="{Binding Path=OrderNumberString}"></TextBlock>
+        <TextBlock Grid.Row="0" Background="#FFDB899D" FontSize="16" FontWeight="Bold" Text="{Binding Path=OrderNumberString}"/>
         <StackPanel Grid.Row="1"  ScrollViewer.VerticalScrollBarVisibility="Auto">
             <ListBox ItemsSource="{Binding Path=Items}" Height="541" Opacity=".8">
                 <ListBox.ItemTemplate>
@@ -27,8 +27,13 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column ="0" Text="{Binding}" FontSize="12"/>
-                            <TextBlock Grid.Column="1" Text="{Binding Path=Price, StringFormat=c}" HorizontalAlignment="Right" />
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row ="0" Grid.Column ="0" Text="{Binding}" FontSize="12"/>
+                            <TextBlock Grid.Row ="0" Grid.Column="1" Text="{Binding Path=Price, StringFormat=c}" HorizontalAlignment="Right" />
+                            <ListBox Grid.Row ="1" Grid.ColumnSpan="2" ItemsSource="{Binding Path=SpecialInstructions}" />
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

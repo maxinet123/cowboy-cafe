@@ -47,8 +47,15 @@ namespace PointOfSale
             AddCowboyCoffeeButton.Click += OnItemAddButtonClicked;
             AddWaterButton.Click += OnItemAddButtonClicked;
         }
+        /// <summary>
+        /// Button handler that adds specific item to the order and swaps screens into the customization screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void OnItemAddButtonClicked(object sender, RoutedEventArgs e)
         {
+            IOrderItem item = null;
+            FrameworkElement screen = null;
             var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
@@ -57,64 +64,81 @@ namespace PointOfSale
                     switch (button.Tag)
                     {
                         case "CowpokeChili":
-                            order.Add(new CowpokeChili());
-                            orderControl.SwapScreen(new CustomizeCowpokeChili());
+                            item = new CowpokeChili();
+                            screen = new CustomizeCowpokeChili();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "RustlersRibs":
-                            order.Add(new RustlersRibs());
-                            orderControl.SwapScreen(new CustomizeRustlersRibs());
+                            item = new RustlersRibs();
+                            screen = new CustomizeRustlersRibs();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "PecosPulledPork":
-                            order.Add(new PecosPulledPork());
-                            orderControl.SwapScreen(new CustomizePecosPulledPork());
+                            item = new PecosPulledPork();
+                            screen = new CustomizePecosPulledPork();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "TrailBurger":
-                            order.Add(new TrailBurger());
-                            orderControl.SwapScreen(new CustomizeTrailBurger());
+                            item = new TrailBurger();
+                            screen = new CustomizeTrailBurger();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "DakotaDouble":
-                            order.Add(new DakotaDoubleBurger());
-                            orderControl.SwapScreen(new CustomizeDakotaDoubleBurger());
+                            item = new DakotaDoubleBurger();
+                            screen = new CustomizeDakotaDoubleBurger();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "TexasTriple":
-                            order.Add(new TexasTripleBurger());
-                            orderControl.SwapScreen(new CustomizeTexasTripleBurger());
+                            item = new TexasTripleBurger();
+                            screen = new CustomizeTexasTripleBurger();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "AngryChicken":
-                            order.Add(new AngryChicken());
-                            orderControl.SwapScreen(new CustomizeAngryChicken());
+                            item = new AngryChicken();
+                            screen = new CustomizeAngryChicken();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "ChiliCheeseFries":
-                            order.Add(new ChiliCheeseFries());
-                            orderControl.SwapScreen(new CustomizeChiliCheeseFries());
+
+                            item = new ChiliCheeseFries();
+                            screen = new CustomizeChiliCheeseFries();
+                            
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "CornDodgers":
-                            order.Add(new CornDodgers());
-                            orderControl.SwapScreen(new CustomizeCornDodgers());
+                            item = new CornDodgers();
+                            screen = new CustomizeCornDodgers();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "PanDeCampo":
-                            order.Add(new PanDeCampo());
-                            orderControl.SwapScreen(new CustomizePanDeCampo());
+                            item = new PanDeCampo();
+                            screen = new CustomizePanDeCampo();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "BakedBeans":
-                            order.Add(new BakedBeans());
-                            orderControl.SwapScreen(new CustomizeBakedBeans());
+                            item = new BakedBeans();
+                            screen = new CustomizeBakedBeans();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "JerkedSoda":
-                            order.Add(new JerkedSoda());
-                            orderControl.SwapScreen(new CustomizeJerkedSoda());
+                            item = new JerkedSoda();
+                            screen = new CustomizeJerkedSoda();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "TexasTea":
-                            order.Add(new TexasTea());
-                            orderControl.SwapScreen(new CustomizeTexasTea());
+                            item = new TexasTea();
+                            screen = new CustomizeTexasTea();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "CowboyCoffee":
-                            order.Add(new CowboyCoffee());
-                            orderControl.SwapScreen(new CustomizeCowboyCoffee());
+                            item = new CowboyCoffee();
+                            screen = new CustomizeCowboyCoffee();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "Water":
-                            order.Add(new Water());
-                            orderControl.SwapScreen(new CustomizeWater());
+                            item = new Water();
+                            screen = new CustomizeWater();
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         default:
 
@@ -123,6 +147,26 @@ namespace PointOfSale
                 }
             }
 
+        }
+        void AddItemAndOpenCustomizationScreen(IOrderItem item, FrameworkElement screen)
+        {
+            var order = DataContext as Order;
+            if (order == null)
+            {
+                throw new Exception("DataContext expected tp be an Order instance.");
+            }
+
+            if (screen != null)
+            {
+                var orderControl = this.FindAncestor<OrderControl>();
+                if (orderControl == null) 
+                { 
+                    throw new Exception("An ancestor of OrderControl..."); 
+                }
+                screen.DataContext = item;
+                orderControl.SwapScreen(screen);
+            }
+            order.Add(item);
         }
     }
 }

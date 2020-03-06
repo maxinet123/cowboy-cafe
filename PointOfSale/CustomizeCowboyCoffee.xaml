@@ -10,29 +10,23 @@
         <TextBlock Width ="700" HorizontalAlignment="Left" FontWeight="Bold" FontSize="20" Text="Customize Cowboy Coffee" />
         <TextBlock FontSize="18" FontWeight="DemiBold" Text="Size:"/>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Size.Small}" Margin="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Small</Label>
+            <CheckBox IsChecked="{Binding Path= Size}" Margin="10" VerticalAlignment="Center" FontSize="18">Small</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path= Size.Medium}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Medium</Label>
+            <CheckBox IsChecked="{Binding Path= Size}" Margin ="10" VerticalAlignment="Center" FontSize="18">Medium</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Size.Large}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Large</Label>
+            <CheckBox IsChecked="{Binding Path= Size}" Margin ="10" VerticalAlignment="Center" FontSize="18">Large</CheckBox>
         </StackPanel>
         <TextBlock FontSize="18" FontWeight="DemiBold" Text="Type:"/>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Decaf}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Decaf</Label>
+            <CheckBox IsChecked="{Binding Path= Decaf}" Margin ="10" VerticalAlignment="Center" FontSize="18">Decaf</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Ice}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Ice</Label>
+            <CheckBox IsChecked="{Binding Path= Ice}" Margin ="10" VerticalAlignment="Center" FontSize="18">Ice</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= RoomForCream}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Cream</Label>
+            <CheckBox IsChecked="{Binding Path= RoomForCream}" Margin ="10" VerticalAlignment="Center" FontSize="18">Cream</CheckBox>
         </StackPanel>
     </StackPanel>
 </UserControl>

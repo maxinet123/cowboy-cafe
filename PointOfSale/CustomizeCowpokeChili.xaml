@@ -9,20 +9,16 @@
     <StackPanel Background="White" Opacity=".8">
         <TextBlock Width ="700" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Cowpoke Chili" />
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Cheese}" Margin="10" VerticalAlignment="Center" Name="CheeseChecked"/>
-            <Label FontSize="18">Cheese</Label>
+            <CheckBox IsChecked="{Binding Path= Cheese}" Margin="10" FontSize ="18" VerticalAlignment="Center" Name="CheeseChecked">Cheese</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path= SourCream}" Margin ="10" VerticalAlignment="Center" Name="SourCreamChecked"/>
-            <Label FontSize="18">Sour Cream</Label>
+            <CheckBox IsChecked="{Binding Path= SourCream}" Margin ="10 " FontSize ="18" VerticalAlignment="Center" Name="SourCreamChecked">Sour Cream</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= GreenOnions}" Margin ="10" VerticalAlignment="Center" Name="GreenOnionsChecked"/>
-            <Label FontSize="18">Green Onions</Label>
+            <CheckBox IsChecked="{Binding Path= GreenOnions}" Margin ="10" FontSize ="18" VerticalAlignment="Center" Name="GreenOnionsChecked">Green Onions</CheckBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= TortillaStrips}" Margin ="10" VerticalAlignment="Center" Name="TortillaStripsChecked"/>
-            <Label FontSize="18">Tortilla Strips</Label>
+            <CheckBox IsChecked="{Binding Path= TortillaStrips}" Margin ="10" FontSize ="18" VerticalAlignment="Center" Name="TortillaStripsChecked">Tortilla Strips</CheckBox>
         </StackPanel>
     </StackPanel>
 </UserControl>

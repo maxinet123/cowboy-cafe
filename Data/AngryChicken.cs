@@ -16,7 +16,6 @@ namespace CowboyCafe.Data
     /// </summary>
     public class AngryChicken : Entree
     {
-        public override event PropertyChangedEventHandler PropertyChanged;
 
         private bool bread = true;
         /// <summary>
@@ -28,8 +27,7 @@ namespace CowboyCafe.Data
             set 
             { 
                 bread = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bread"));
-
+                NotifyOfPropertyChanged("Bread");
             }
         }
 
@@ -43,7 +41,7 @@ namespace CowboyCafe.Data
             set 
             { 
                 pickle = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
+                NotifyOfPropertyChanged("Pickle");
 
             }
         }

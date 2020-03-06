@@ -16,9 +16,30 @@ namespace CowboyCafe.Data
     public abstract class Side : IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
+        /// Property that is triggered when something has changed and updates everything
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// private backing variable
+        /// </summary>
+        private Size size;
+        /// <summary>
         /// Gets the size of the side
         /// </summary>
-        public virtual Size Size { get; set; }
+        public virtual Size Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+            }
+        }
 
         /// <summary>
         /// Gets the price of the side
@@ -35,9 +56,7 @@ namespace CowboyCafe.Data
         /// </summary>
         public List<string> SpecialInstructions => new List<string>();
 
-        /// <summary>
-        /// Property that is triggered when something has changed and updates everything
-        /// </summary>
-        public abstract event PropertyChangedEventHandler PropertyChanged;
+
+
     }
 }

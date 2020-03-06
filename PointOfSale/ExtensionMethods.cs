@@ -19,7 +19,7 @@ namespace CowboyCafe.Extension
         {
             var parent = VisualTreeHelper.GetParent(obj);
 
-            if (parent is null) return null;
+            if (parent == null) return null;
             if (parent is T) return parent as T;
             return FindAncestor<T>(parent);
         }
