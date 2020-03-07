@@ -5,20 +5,22 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="350">
+             d:DesignHeight="450" d:DesignWidth="800" DataContextChanged="OnSizeChanged">
+    <UserControl.Resources>
+        <Style TargetType="RadioButton">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1.4" ScaleY="1.4"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <StackPanel Background="White" Opacity=".8">
-        <TextBlock Width ="700" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Pan de Campo" />
-        <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Size}" Margin="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Small</Label>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path= Size}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Medium</Label>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Size}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Large</Label>
+        <TextBlock Width ="700" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Pan De Campo" />
+        <StackPanel Orientation="Vertical">
+            <RadioButton Name="SizeSmall" Margin ="10" VerticalAlignment="Center" >Small</RadioButton>
+            <RadioButton Name="SizeMedium" Margin ="10" VerticalAlignment="Center">Medium</RadioButton>
+            <RadioButton Name="SizeLarge" Margin ="10" VerticalAlignment="Center">Large</RadioButton>
         </StackPanel>
     </StackPanel>
 </UserControl>

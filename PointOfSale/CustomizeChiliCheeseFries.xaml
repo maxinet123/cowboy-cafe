@@ -6,12 +6,21 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="350" DataContextChanged="OnSizeChanged">
+    <UserControl.Resources>
+        <Style TargetType="RadioButton">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1.4" ScaleY="1.4"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <StackPanel Background="White" Opacity=".8">
-        <TextBlock Width ="700" FontWeight ="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Cowpoke Chili" />
+        <TextBlock Width ="700" FontWeight ="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Chili Cheese Fries" />
         <StackPanel Orientation="Vertical">
-            <RadioButton Name="SizeSmall" Margin ="10" VerticalAlignment="Center" FontSize="18">Small</RadioButton>
-            <RadioButton Name="SizeMedium" Margin ="10" VerticalAlignment="Center" FontSize="18">Medium</RadioButton>
-            <RadioButton Name="SizeLarge" Margin ="10" VerticalAlignment="Center" FontSize="18">Large</RadioButton>
+            <RadioButton Name="SizeSmall" Margin ="10" VerticalAlignment="Center">Small</RadioButton>
+            <RadioButton Name="SizeMedium" Margin ="10" VerticalAlignment="Center">Medium</RadioButton>
+            <RadioButton Name="SizeLarge" Margin ="10" VerticalAlignment="Center">Large</RadioButton>
         </StackPanel>
     </StackPanel>
 </UserControl>

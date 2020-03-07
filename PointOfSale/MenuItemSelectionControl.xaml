@@ -34,7 +34,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
-            <TextBlock TextAlignment="Center" Height="30" FontSize="20" FontWeight="Bold" Margin="3" Foreground="White" >Entree</TextBlock>
+            <TextBlock TextAlignment="Center" Height="30" FontSize="20" FontWeight="Bold" Foreground="White" >Entree</TextBlock>
             <Button Name="AddCowpokeChiliButton" Tag="CowpokeChili" >Cowpoke Chili</Button>
             <Button Name="AddRustlersRibsButton" Tag="RustlersRibs">Rustler's Ribs</Button>
             <Button Name="AddPecosPulledPorkButton" Tag="PecosPulledPork">Pecos Pulled Pork</Button>
@@ -44,14 +44,14 @@
             <Button Name="AddAngryChickenButton" Tag="AngryChicken">Angry Chicken</Button>
         </StackPanel>
         <StackPanel Grid.Column="1">
-            <TextBlock TextAlignment="Center" Height="30" FontSize="20" FontWeight="Bold" Margin="3" Foreground="White">Sides</TextBlock>
+            <TextBlock TextAlignment="Center" Height="30" FontSize="20" FontWeight="Bold" Foreground="White">Sides</TextBlock>
             <Button Name="AddChiliCheeseFriesButton" Tag="ChiliCheeseFries">Chili Cheese Fries</Button>
             <Button Name="AddCornDodgersButton" Tag="CornDodgers">Corn Dodgers</Button>
             <Button Name="AddPanDeCampoButton" Tag="PanDeCampo">Pan de Campo</Button>
             <Button Name="AddBakedBeansButton" Tag="BakedBeans">Baked Beans</Button>
         </StackPanel>
         <StackPanel Grid.Column="2" >
-            <TextBlock TextAlignment="Center" Height="30" FontSize="20" FontWeight="Bold" Margin="3" Foreground="White">Drinks</TextBlock>
+            <TextBlock TextAlignment="Center" Height="30" FontSize="20" FontWeight="Bold" Foreground="White">Drinks</TextBlock>
             <Button Name="AddJerkedSodaButton" Tag="JerkedSoda">Jerked Soda</Button>
             <Button Name="AddTexasTeaButton" Tag="TexasTea">Texas Tea</Button>
             <Button Name="AddCowboyCoffeeButton" Tag="CowboyCoffee">Cowboy Coffee</Button>

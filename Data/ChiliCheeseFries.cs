@@ -14,6 +14,22 @@ namespace CowboyCafe.Data
     /// </summary>
     public class ChiliCheeseFries : Side
     {
+        private Size size = Size.Small;
+        /// <summary>
+        /// Gets the size for the Chili Cheese Fries
+        /// </summary>
+        public override Size Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+                NotifyOfPropertyChanged("Size");
+            }
+        }
 
         /// <summary>
         /// Calories depending on size for Chili Cheese Fries
@@ -31,7 +47,7 @@ namespace CowboyCafe.Data
                     case Size.Large:
                         return 610;
                     default:
-                        throw new NotImplementedException();
+                        throw new NotImplementedException("Unknown Size");
                 }
             }
 
@@ -57,7 +73,6 @@ namespace CowboyCafe.Data
                 }
             }
         }
-        public override Size Size { get; set; }
 
         /// <summary>
         /// Prints the string corresponding to the side and size of the side
@@ -65,7 +80,7 @@ namespace CowboyCafe.Data
         /// <returns>The string describing the Chili Cheese Fries side</returns>
         public override string ToString()
         {
-            return Size + " Chili Cheese Fries";
+            return Size.ToString() + " Chili Cheese Fries";
         }
     }
 }

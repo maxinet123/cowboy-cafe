@@ -48,7 +48,7 @@ namespace PointOfSale
             AddWaterButton.Click += OnItemAddButtonClicked;
         }
         /// <summary>
-        /// Button handler that adds specific item to the order and swaps screens into the customization screen
+        /// Button handler that calls the helper method depending on the item selected
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -70,7 +70,6 @@ namespace PointOfSale
                             break;
                         case "RustlersRibs":
                             item = new RustlersRibs();
-                            screen = new CustomizeRustlersRibs();
                             AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "PecosPulledPork":
@@ -99,10 +98,8 @@ namespace PointOfSale
                             AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "ChiliCheeseFries":
-
                             item = new ChiliCheeseFries();
                             screen = new CustomizeChiliCheeseFries();
-                            
                             AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         case "CornDodgers":
@@ -141,13 +138,18 @@ namespace PointOfSale
                             AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                         default:
-
+                            AddItemAndOpenCustomizationScreen(item, screen);
                             break;
                     }
                 }
             }
 
         }
+        /// <summary>
+        /// Helper method that sets the order and switches screens to the customizations
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="screen"></param>
         void AddItemAndOpenCustomizationScreen(IOrderItem item, FrameworkElement screen)
         {
             var order = DataContext as Order;
@@ -161,7 +163,7 @@ namespace PointOfSale
                 var orderControl = this.FindAncestor<OrderControl>();
                 if (orderControl == null) 
                 { 
-                    throw new Exception("An ancestor of OrderControl..."); 
+                    throw new Exception("An ancestor of OrderControl not found."); 
                 }
                 screen.DataContext = item;
                 orderControl.SwapScreen(screen);

@@ -54,6 +54,7 @@ namespace CowboyCafe.Data
         /// Prints "Order " with the number that pertains to the order at the top of the ordersummary xaml
         /// </summary>
         public string OrderNumberString => "Order " + OrderNumber.ToString();
+
         /// <summary>
         /// Adds items to the list and notifies properties that need to update
         /// </summary>
@@ -87,7 +88,10 @@ namespace CowboyCafe.Data
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
 
         }
-
+        /// <summary>
+        /// Invokes the property change for the items and subtotal
+        /// </summary>
+        /// <param name="propertyName"></param>
         private void OnPropertyItemChanged(object sender, PropertyChangedEventArgs e)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));

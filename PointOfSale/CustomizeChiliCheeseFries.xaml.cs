@@ -19,16 +19,28 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeChiliCheeseFries : UserControl
     {
+        /// <summary>
+        /// Initializes components and all the radiobutton event handlers for the xaml
+        /// </summary>
         public CustomizeChiliCheeseFries()
         {
             InitializeComponent();
-            
+            SizeSmall.Click += SizeButtonClicked;
+            SizeMedium.Click += SizeButtonClicked;
+            SizeLarge.Click += SizeButtonClicked;
         }
-        private void OnSizeChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Calls the Size change method to invoke when the button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnSizeChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             SideSizeChanged();
         }
-
+        /// <summary>
+        /// Changes the radio button depending on the enum that the user wants to set the size to.
+        /// </summary>
         private void SideSizeChanged() { 
             if (DataContext is Side side)
             {
@@ -53,6 +65,11 @@ namespace PointOfSale
                 }
             }
         }
+        /// <summary>
+        /// Manually binds the sizes to the buttons to display elsewhere in the program
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SizeButtonClicked(object sender, EventArgs e)
         {
             if(sender is Button button)
@@ -77,7 +94,6 @@ namespace PointOfSale
                     }
                 }
             }
-        }
-       
+        }  
     }
 }

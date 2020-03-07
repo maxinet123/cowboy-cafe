@@ -58,7 +58,7 @@ namespace PointOfSale
             Container.Child = new MenuItemSelectionControl();
         }
         /// <summary>
-        /// Button event swaps back to the MenuItemSelecetionControl
+        /// Button event swaps back to the MenuItemSelectionControl
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

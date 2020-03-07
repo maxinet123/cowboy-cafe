@@ -29,11 +29,6 @@ namespace CowboyCafe.Data
         /// Gets the special instructions for the drink
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
-        
-        /// <summary>
-        /// Gets the size of the drink
-        /// </summary>
-        public virtual Size Size { get; set; }
 
         /// <summary>
         /// Gets the bool for ice in the drink
@@ -43,7 +38,40 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Property that is triggered when something has changed and updates everything
         /// </summary>
-        public abstract event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// private backing variable
+        /// </summary>
+        private Size size;
+
+        /// <summary>
+        /// Gets the size of the side
+        /// </summary>
+        public virtual Size Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+            }
+        }
+
+        /// <summary>
+        /// Notifies when the property is changed and updates
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+        }
     }
 
 }

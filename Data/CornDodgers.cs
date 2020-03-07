@@ -14,6 +14,22 @@ namespace CowboyCafe.Data
     /// </summary>
     public class CornDodgers : Side
     {
+        private Size size = Size.Small;
+        /// <summary>
+        /// Gets the size for the Corn Dodgers
+        /// </summary>
+        public override Size Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+                NotifyOfPropertyChanged("Size");
+            }
+        }
         /// <summary>
         /// Calories depending on size for Corn Dodgers
         /// </summary>
@@ -55,7 +71,6 @@ namespace CowboyCafe.Data
                 }
             }
         }
-        public override Size Size { get; set; }
 
         /// <summary>
         /// Prints the string corresponding to the side and size of the side
@@ -63,7 +78,7 @@ namespace CowboyCafe.Data
         /// <returns>The string describing the Corn Dodgers side</returns>
         public override string ToString()
         {
-            return Size + " Corn Dodgers";
+            return Size.ToString() + " Corn Dodgers";
         }
     }
 }

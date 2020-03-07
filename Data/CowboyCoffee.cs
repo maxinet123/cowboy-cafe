@@ -15,9 +15,10 @@ namespace CowboyCafe.Data
     /// </summary>
     public class CowboyCoffee : Drink
     {
-        public override event PropertyChangedEventHandler PropertyChanged;
-
         private Size size = Size.Small;
+        /// <summary>
+        /// Gets the size for the Cowboy Coffee
+        /// </summary>
         public override Size Size
         {
             get
@@ -27,7 +28,7 @@ namespace CowboyCafe.Data
             set
             {
                 size = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                NotifyOfPropertyChanged("Size");
             }
         }
 
@@ -41,8 +42,8 @@ namespace CowboyCafe.Data
             set 
             { 
                 cream = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RoomForCream"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyOfPropertyChanged("RoomForCream");
+
             }
         }
 
@@ -56,8 +57,7 @@ namespace CowboyCafe.Data
             set 
             { 
                 decaf = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Decaf"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyOfPropertyChanged("Decaf");
             }
         }
 
@@ -71,8 +71,7 @@ namespace CowboyCafe.Data
             set 
             { 
                 ice = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyOfPropertyChanged("Ice");
             }
         }
 
@@ -128,7 +127,6 @@ namespace CowboyCafe.Data
                 var instructions = new List<string>();
 
                 if (ice) instructions.Add("Add Ice");
-                if (decaf) instructions.Add("Decaf");
                 if (cream) instructions.Add("Room for Cream");
 
                 return instructions;
@@ -142,9 +140,9 @@ namespace CowboyCafe.Data
         {
             if (decaf)
             {
-                return Size + " Decaf Cowboy Coffee";
+                return Size.ToString() + " Decaf Cowboy Coffee";
             }
-            return Size + " Cowboy Coffee";
+            return Size.ToString() + " Cowboy Coffee";
         }
     }
 }

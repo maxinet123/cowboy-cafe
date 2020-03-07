@@ -15,10 +15,11 @@ namespace CowboyCafe.Data
     /// </summary>
     public class JerkedSoda : Drink
     {
-        public override event PropertyChangedEventHandler PropertyChanged;
-
         private Size size = Size.Small;
-        public override Size Size 
+        /// <summary>
+        /// Gets the size for the Jerked Soda
+        /// </summary>
+        public override Size Size
         {
             get
             {
@@ -27,7 +28,7 @@ namespace CowboyCafe.Data
             set
             {
                 size = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                NotifyOfPropertyChanged("Size");
             }
         }
 
@@ -44,7 +45,24 @@ namespace CowboyCafe.Data
             set
             {
                 flavor = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Flavor"));
+                NotifyOfPropertyChanged("Flavor");
+            }
+        }
+
+        private bool ice = true;
+        /// <summary>
+        /// If the jerked soda comes with ice.
+        /// </summary>
+        public override bool Ice
+        {
+            get
+            {
+                return ice;
+            }
+            set
+            {
+                ice = value;
+                NotifyOfPropertyChanged("Ice");
             }
         }
 
@@ -89,16 +107,6 @@ namespace CowboyCafe.Data
             }
         }
 
-        private bool ice = true;
-        /// <summary>
-        /// If the jerked soda comes with ice.
-        /// </summary>
-        public override bool Ice
-        {
-            get { return ice; }
-            set { ice = value; }
-        }
-
         /// <summary>
         /// Gets the special instructions for the Jerked soda
         /// </summary>
@@ -122,86 +130,18 @@ namespace CowboyCafe.Data
             switch (Flavor)
             {
                 case SodaFlavor.BirchBeer:
-                    return Size + " Birch Beer Jerked Soda";
+                    return Size.ToString() + " Birch Beer Jerked Soda";
                 case SodaFlavor.CreamSoda:
-                    return Size + " Cream Soda Jerked Soda";
+                    return Size.ToString() + " Cream Soda Jerked Soda";
                 case SodaFlavor.OrangeSoda:
-                    return Size + " Orange Soda Jerked Soda";
+                    return Size.ToString() + " Orange Soda Jerked Soda";
                 case SodaFlavor.RootBeer:
-                    return Size + " Root Beer Jerked Soda";
+                    return Size.ToString() + " Root Beer Jerked Soda";
                 case SodaFlavor.Sarsparilla:
-                    return Size + " Sarsparilla Jerked Soda";
+                    return Size.ToString() + " Sarsparilla Jerked Soda";
                 default:
-                    throw new NotImplementedException();
+                    throw new NotImplementedException("No flavor found.");
             }
-            /*switch (Size)
-            {
-                case Size.Small:
-                    if (Flavor == SodaFlavor.BirchBeer)
-                    {
-                        return "Small Birch Beer Jerked Soda";
-                    }
-                    else if (Flavor == SodaFlavor.CreamSoda)
-                    {
-                        return "Small Cream Soda Jerked Soda";
-                    }
-                    else if (Flavor == SodaFlavor.OrangeSoda)
-                    {
-                        return "Small Orange Soda Jerked Soda";
-                    }
-                    else if (Flavor == SodaFlavor.RootBeer)
-                    {
-                        return "Small Root Beer Jerked Soda";
-                    }
-                    else
-                    {
-                        return "Small Sarsparilla Jerked Soda";
-                    }
-                case Size.Medium:
-                    if (Flavor == SodaFlavor.BirchBeer)
-                    {
-                        return "Medium Birch Beer Jerked Soda";
-                    }
-                    else if (Flavor == SodaFlavor.CreamSoda)
-                    {
-                        return "Medium Cream Soda Jerked Soda";
-                    }
-                    else if (Flavor == SodaFlavor.OrangeSoda)
-                    {
-                        return "Medium Orange Soda Jerked Soda";
-                    }
-                    else if (Flavor == SodaFlavor.RootBeer)
-                    {
-                        return "Medium Root Beer Jerked Soda";
-                    }
-                    else
-                    {
-                        return "Medium Sarsparilla Jerked Soda";
-                    }
-                case Size.Large:
-                    if (Flavor == SodaFlavor.BirchBeer)
-                    {
-                        return "Large Birch Beer Jerked Soda";
-                    }
-                    else if (Flavor == SodaFlavor.CreamSoda)
-                    {
-                        return "Large Cream Soda Jerked Soda";
-                    }
-                    else if (Flavor == SodaFlavor.OrangeSoda)
-                    {
-                        return "Large Orange Soda Jerked Soda";
-                    }
-                    else if (Flavor == SodaFlavor.RootBeer)
-                    {
-                        return "Large Root Beer Jerked Soda";
-                    }
-                    else
-                    {
-                        return "Large Sarsparilla Jerked Soda";
-                    }
-                default:
-                    throw new NotImplementedException();
-            }*/
         }
     }
 }

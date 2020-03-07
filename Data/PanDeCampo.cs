@@ -15,8 +15,22 @@ namespace CowboyCafe.Data
     /// </summary>
     public class PanDeCampo : Side
     {
-        public override Size Size { get; set; }
-
+        private Size size = Size.Small;
+        /// <summary>
+        /// Gets the size for the Pan de Campo
+        /// </summary>
+        public override Size Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+                NotifyOfPropertyChanged("Size");
+            }
+        }
         /// <summary>
         /// Calories depending on size for Pan De Campo
         /// </summary>
@@ -64,7 +78,16 @@ namespace CowboyCafe.Data
         /// <returns>The string describing the Pan de Campo side</returns>
         public override string ToString()
         {
-            return Size + " Pan de Campo";
+            switch (Size)
+            {
+                default:
+                case Size.Small:
+                    return "Small Pan De Campo";
+                case Size.Medium:
+                    return "Medium Pan De Campo";
+                case Size.Large:
+                    return "Large Pan De Campo";
+            }
         }
     }
 }
