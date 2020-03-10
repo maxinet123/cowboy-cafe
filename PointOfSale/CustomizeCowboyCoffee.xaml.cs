@@ -33,12 +33,12 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void OnSizeChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            SideSizeChanged();
+            DrinkSizeChanged();
         }
         /// <summary>
         /// Changes the radio button depending on the enum that the user wants to set the size to.
         /// </summary>
-        private void SideSizeChanged()
+        private void DrinkSizeChanged()
         {
             if (DataContext is Drink side)
             {
@@ -79,15 +79,15 @@ namespace PointOfSale
                         default:
                         case "SizeSmall":
                             side.Size = CowboyCafe.Data.Size.Small;
-                            SideSizeChanged();
+                            DrinkSizeChanged();
                             break;
                         case "SizeMedium":
                             side.Size = CowboyCafe.Data.Size.Medium;
-                            SideSizeChanged();
+                            DrinkSizeChanged();
                             break;
                         case "SizeLarge":
                             side.Size = CowboyCafe.Data.Size.Large;
-                            SideSizeChanged();
+                            DrinkSizeChanged();
                             break;
                     }
                 }
