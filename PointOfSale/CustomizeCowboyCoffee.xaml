@@ -14,6 +14,13 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style TargetType="CheckBox">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1.4" ScaleY="1.4"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
     <StackPanel Background="White" Opacity=".8">
         <TextBlock Width ="700" HorizontalAlignment="Left" FontWeight="Bold" FontSize="20" Text="Customize Cowboy Coffee" />
@@ -23,15 +30,11 @@
             <RadioButton Name="SizeMedium" Margin ="10" VerticalAlignment="Center">Medium</RadioButton>
             <RadioButton Name="SizeLarge" Margin ="10" VerticalAlignment="Center">Large</RadioButton>
         </StackPanel>
-        <TextBlock FontSize="18" FontWeight="DemiBold" Text="Type:"/>
-        <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Decaf}" Margin ="10" VerticalAlignment="Center" FontSize="18">Decaf</CheckBox>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Ice}" Margin ="10" VerticalAlignment="Center" FontSize="18">Ice</CheckBox>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= RoomForCream}" Margin ="10" VerticalAlignment="Center" FontSize="18">Cream</CheckBox>
+        <TextBlock FontSize="18" FontWeight="DemiBold" Text="Options:"/>
+        <StackPanel Orientation="Vertical" >
+            <CheckBox IsChecked="{Binding Path= Decaf}" Margin ="10" VerticalAlignment="Center">Decaf</CheckBox>
+            <CheckBox IsChecked="{Binding Path= Ice}" Margin ="10" VerticalAlignment="Center">Ice</CheckBox>
+            <CheckBox IsChecked="{Binding Path= RoomForCream}" Margin ="10" VerticalAlignment="Center">Cream</CheckBox>
         </StackPanel>
     </StackPanel>
 </UserControl>

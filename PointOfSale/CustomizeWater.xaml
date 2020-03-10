@@ -6,22 +6,34 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" DataContextChanged="OnSizeChanged">
+    <UserControl.Resources>
+        <Style TargetType="RadioButton">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1.4" ScaleY="1.4"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="CheckBox">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1.4" ScaleY="1.4"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <StackPanel Background="White" Opacity=".8">
         <TextBlock Width ="700" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Water" />
         <TextBlock FontSize="18" FontWeight="DemiBold" Text="Size:"/>
         <StackPanel Orientation="Vertical">
-            <RadioButton Name="SizeSmall" Margin ="10" VerticalAlignment="Center" FontSize="18">Small</RadioButton>
-            <RadioButton Name="SizeMedium" Margin ="10" VerticalAlignment="Center" FontSize="18">Medium</RadioButton>
-            <RadioButton Name="SizeLarge" Margin ="10" VerticalAlignment="Center" FontSize="18">Large</RadioButton>
+            <RadioButton Name="SizeSmall" Margin ="10" VerticalAlignment="Center">Small</RadioButton>
+            <RadioButton Name="SizeMedium" Margin ="10" VerticalAlignment="Center">Medium</RadioButton>
+            <RadioButton Name="SizeLarge" Margin ="10" VerticalAlignment="Center">Large</RadioButton>
         </StackPanel>
-        <TextBlock FontSize="18" FontWeight="DemiBold" Text="Type:"/>
-        <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Lemon}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Lemon</Label>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" >
-            <CheckBox IsChecked="{Binding Path= Ice}" Margin ="10" VerticalAlignment="Center"/>
-            <Label FontSize="18">Ice</Label>
+        <TextBlock FontSize="18" FontWeight="DemiBold" Text="Options:"/>
+        <StackPanel Orientation="Vertical">
+            <CheckBox IsChecked="{Binding Path= Lemon}" Margin ="10" VerticalAlignment="Center">Lemon</CheckBox>
+            <CheckBox IsChecked="{Binding Path= Ice}" Margin ="10" VerticalAlignment="Center">Ice</CheckBox>
         </StackPanel>
     </StackPanel>
 </UserControl>

@@ -22,6 +22,8 @@ namespace PointOfSale
         public CustomizeJerkedSoda()
         {
             InitializeComponent();
+            DataContextChanged += OnSizeChanged;
+            DataContextChanged += OnFlavorChanged;
             SizeSmall.Click += SizeButtonClicked;
             SizeMedium.Click += SizeButtonClicked;
             SizeLarge.Click += SizeButtonClicked;
@@ -75,11 +77,11 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SizeButtonClicked(object sender, EventArgs e)
         {
-            if (sender is Button button)
+            if (sender is RadioButton radio)
             {
                 if (DataContext is Drink side)
                 {
-                    switch (button.Name)
+                    switch (radio.Name)
                     {
                         default:
                         case "SizeSmall":
@@ -98,9 +100,9 @@ namespace PointOfSale
                 }
             }
         }
-        ///*
+
         /// <summary>
-        /// Calls the Size change method to invoke when the button is clicked
+        /// Calls the Flavor change method to invoke when the button is clicked
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -163,11 +165,11 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void FlavorButtonClicked(object sender, EventArgs e)
         {
-            if (sender is Button button)
+            if (sender is RadioButton radio)
             {
                 if (DataContext is JerkedSoda drink)
                 {
-                    switch (button.Name)
+                    switch (radio.Name)
                     {
                         default:
                         case "BirchBeerFlavor":
@@ -194,6 +196,5 @@ namespace PointOfSale
                 }
             }
         }
-         //* */
     }
 }

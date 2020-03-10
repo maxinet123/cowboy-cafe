@@ -70,11 +70,11 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SizeButtonClicked(object sender, EventArgs e)
         {
-            if (sender is Button button)
+            if (sender is RadioButton radio)
             {
                 if (DataContext is Side side)
                 {
-                    switch (button.Name)
+                    switch (radio.Name)
                     {
                         default:
                         case "SizeSmall":

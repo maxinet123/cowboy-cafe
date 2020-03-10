@@ -37,7 +37,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:Name="OnItemSelectionButton" Content="Item Selection"/>
+            <Button x:Name="OnItemSelectionButton" Content="Select Item"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button Name="OnCancelOrderButton">Cancel Order</Button>

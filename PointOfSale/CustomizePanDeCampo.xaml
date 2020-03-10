@@ -17,6 +17,7 @@
     </UserControl.Resources>
     <StackPanel Background="White" Opacity=".8">
         <TextBlock Width ="700" FontWeight="Bold" HorizontalAlignment="Left" FontSize="20" Text="Customize Pan De Campo" />
+        <TextBlock FontSize="18" FontWeight="DemiBold" Text="Size:"/>
         <StackPanel Orientation="Vertical">
             <RadioButton Name="SizeSmall" Margin ="10" VerticalAlignment="Center" >Small</RadioButton>
             <RadioButton Name="SizeMedium" Margin ="10" VerticalAlignment="Center">Medium</RadioButton>
