@@ -19,7 +19,7 @@ namespace CowboyCafe.Data
         /// Gets the price of the drink
         /// </summary>
         public abstract double Price { get; }
-        
+
         /// <summary>
         /// Gets the calories of the drink
         /// </summary>

@@ -1,4 +1,9 @@
-﻿using CowboyCafe.Data;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the CustomizePanDeCampo.xaml
+*/
+using CowboyCafe.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,6 +24,9 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizePanDeCampo : UserControl
     {
+        /// <summary>
+        /// Initializes components for the xaml
+        /// </summary>
         public CustomizePanDeCampo()
         {
             InitializeComponent();

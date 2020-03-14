@@ -19,22 +19,27 @@ namespace CowboyCafe.Data
         /// Property that is triggered when something has changed and updates everything
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Starts the OrderNumber at 1
         /// </summary>
         static private uint lastOrderNumber = 1;
+
         /// <summary>
         /// Gets the lastOrderNumber and increments it for the next order 
         /// </summary>
         public uint OrderNumber => lastOrderNumber++;
+
         /// <summary>
         /// List of items from the class of IOrderItems which is Price and SpecialInstructions
         /// </summary>
         private List<IOrderItem> items = new List<IOrderItem>();
+
         /// <summary>
         /// Allows for the list of items to be found and displayed elsewhere when it is called
         /// </summary>
         public IEnumerable<IOrderItem> Items => items.ToArray();
+
         /// <summary>
         /// Keeps track of the subtotal for the order and increases everytime an item is added to the list
         /// </summary>
@@ -50,6 +55,7 @@ namespace CowboyCafe.Data
                 return subtotal;
             }
         }
+
         /// <summary>
         /// Prints "Order " with the number that pertains to the order at the top of the ordersummary xaml
         /// </summary>
@@ -69,9 +75,8 @@ namespace CowboyCafe.Data
             items.Add(item);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
-
-
         }
+
         /// <summary>
         /// Removes items from the list and notifies properties that need to update
         /// </summary>
@@ -88,6 +93,7 @@ namespace CowboyCafe.Data
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
 
         }
+
         /// <summary>
         /// Invokes the property change for the items and subtotal
         /// </summary>
@@ -100,6 +106,5 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             }
         }
-
     }
 }

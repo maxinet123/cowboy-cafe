@@ -23,6 +23,5 @@ namespace CowboyCafe.Data
         /// the special instructions for this IOrderItem
         /// </summary>
         List<string> SpecialInstructions { get; }
-
     }
 }

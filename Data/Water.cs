@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class representing the qualities for the drink, Water
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
@@ -10,7 +15,6 @@ namespace CowboyCafe.Data
      /// </summary>
     public class Water : Drink
     {
-
         private Size size = Size.Small;
         /// <summary>
         /// Gets the size for the Water
@@ -107,12 +111,13 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!ice) instructions.Add("Hold Ice");
-                if (lemon) instructions.Add("Add Lemon");
+                if (!ice) instructions.Add("hold ice");
+                if (lemon) instructions.Add("add lemon");
 
                 return instructions;
             }
         }
+
         /// <summary>
         /// Prints the string corresponding to the drink and size of the drink
         /// </summary>

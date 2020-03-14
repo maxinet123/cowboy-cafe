@@ -16,7 +16,6 @@ namespace CowboyCafe.Data
     /// </summary>
     public class AngryChicken : Entree
     {
-
         private bool bread = true;
         /// <summary>
         /// If the chicken comes on bread

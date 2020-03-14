@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the CustomizeDakotaDoubleBurger.xaml
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,6 +23,9 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeDakotaDoubleBurger : UserControl
     {
+        /// <summary>
+        /// Initializes components for the xaml
+        /// </summary>
         public CustomizeDakotaDoubleBurger()
         {
             InitializeComponent();

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the CustomizeBakedBeans.xaml
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -19,6 +24,9 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeBakedBeans : UserControl
     {
+        /// <summary>
+        /// Initializes components and all the radiobutton event handlers for the xaml
+        /// </summary>
         public CustomizeBakedBeans()
         {
             InitializeComponent();

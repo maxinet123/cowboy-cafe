@@ -1,7 +1,7 @@
 ﻿/*
 * Author: Maxine Teixeira
 * Class: CIS 400
-* Purpose: A class representing the buttons for the OrderSummaryControl xaml
+* Purpose: A class representing the OrderSummaryControl.xaml
 */
 using System;
 using System.Collections.Generic;

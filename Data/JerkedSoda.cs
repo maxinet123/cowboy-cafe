@@ -86,6 +86,7 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
         /// <summary>
         /// Price depending on size for Jerked Soda
         /// </summary>
@@ -116,7 +117,7 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!ice) instructions.Add("Hold Ice");
+                if (!ice) instructions.Add("hold ice");
 
                 return instructions;
             }

@@ -126,12 +126,13 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (ice) instructions.Add("Add Ice");
-                if (cream) instructions.Add("Room for Cream");
+                if (ice) instructions.Add("add ice");
+                if (cream) instructions.Add("room for cream");
 
                 return instructions;
             }
         }
+
         /// <summary>
         /// Prints the string corresponding to the drink and size of the drink
         /// </summary>

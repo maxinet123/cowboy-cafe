@@ -31,6 +31,7 @@ namespace CowboyCafe.Data
                 NotifyOfPropertyChanged("Size");
             }
         }
+
         /// <summary>
         /// Calories depending on size for Baked Beans
         /// </summary>

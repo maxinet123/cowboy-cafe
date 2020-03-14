@@ -15,7 +15,6 @@ namespace CowboyCafe.Data
     /// </summary>
     public class DakotaDoubleBurger : Entree
     {
-
         private bool bun = true;
         /// <summary>
         /// If the burger has a bun
@@ -174,6 +173,7 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
         /// <summary>
         /// Prints the string corresponding to the entree
         /// </summary>

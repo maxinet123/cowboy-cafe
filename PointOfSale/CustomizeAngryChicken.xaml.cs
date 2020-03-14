@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the CustomizeAngryChicken.xaml
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,6 +23,9 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeAngryChicken : UserControl
     {
+        /// <summary>
+        /// Initializes components of the xaml
+        /// </summary>
         public CustomizeAngryChicken()
         {
             InitializeComponent();

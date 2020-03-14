@@ -15,7 +15,6 @@ namespace CowboyCafe.Data
     /// </summary>
     public class PecosPulledPork : Entree
     {
-
         private bool bread = true;
         /// <summary>
         /// If the pulled pork comes on bread 

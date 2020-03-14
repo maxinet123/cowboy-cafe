@@ -31,6 +31,7 @@ namespace CowboyCafe.Data
                 NotifyOfPropertyChanged("Size");
             }
         }
+
         /// <summary>
         /// Calories depending on size for Pan De Campo
         /// </summary>
@@ -72,6 +73,7 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
         /// <summary>
         /// Prints the string corresponding to the side and size of the side
         /// </summary>

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Nathan Bean
+* Edited By: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the CustomizeWater.xaml
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;

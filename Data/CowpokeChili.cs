@@ -113,6 +113,7 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
         /// <summary>
         /// Prints the string corresponding to the entree
         /// </summary>

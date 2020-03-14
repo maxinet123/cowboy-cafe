@@ -15,7 +15,6 @@ namespace CowboyCafe.Data
     /// </summary>
     public class RustlersRibs : Entree
     {
-
         /// <summary>
         /// The price of the ribs
         /// </summary>
@@ -50,6 +49,7 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
         /// <summary>
         /// Prints the string corresponding to the entree
         /// </summary>

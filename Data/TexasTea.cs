@@ -15,7 +15,6 @@ namespace CowboyCafe.Data
     /// </summary>
     public class TexasTea : Drink
     {
-
         private Size size = Size.Small;
         /// <summary>
         /// Gets the size for the Texas Tea
@@ -138,12 +137,13 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-                if (!ice) instructions.Add("Hold Ice");
-                if (lemon) instructions.Add("Add Lemon");
+                if (!ice) instructions.Add("hold ice");
+                if (lemon) instructions.Add("add lemon");
 
                 return instructions;
             }
         }
+
         /// <summary>
         /// Prints the string corresponding to the drink and size of the drink
         /// </summary>

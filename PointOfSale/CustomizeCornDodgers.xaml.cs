@@ -1,4 +1,9 @@
-﻿using CowboyCafe.Data;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the CustomizeCornDodgers.xaml
+*/
+using CowboyCafe.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,6 +24,9 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeCornDodgers : UserControl
     {
+        /// <summary>
+        /// Initializes components and all the radiobutton event handlers for the xaml
+        /// </summary>
         public CustomizeCornDodgers()
         {
             InitializeComponent();

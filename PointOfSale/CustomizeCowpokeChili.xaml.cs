@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the CustomizeCowpokeChili.xaml
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,13 +23,12 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeCowpokeChili : UserControl
     {
+        /// <summary>
+        /// Initializes components for the xaml
+        /// </summary>
         public CustomizeCowpokeChili()
         {
             InitializeComponent();
-            
-        }
-        private void AddToInstructions()
-        {
             
         }
     }

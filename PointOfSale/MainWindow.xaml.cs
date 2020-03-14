@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the MainWindow.xaml
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

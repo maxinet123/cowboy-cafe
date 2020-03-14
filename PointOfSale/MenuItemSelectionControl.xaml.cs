@@ -1,7 +1,7 @@
 ﻿/*
 * Author: Maxine Teixeira
 * Class: CIS 400
-* Purpose: A class representing the buttons for the MenuItemSelectionControl xaml
+* Purpose: A class representing the buttons for the MenuItemSelectionControl.xaml
 */
 using System;
 using System.Collections.Generic;

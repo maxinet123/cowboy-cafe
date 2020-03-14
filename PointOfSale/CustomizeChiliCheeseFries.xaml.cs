@@ -1,4 +1,9 @@
-﻿using CowboyCafe.Data;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the CustomizeChiliCheeseFries.xaml
+*/
+using CowboyCafe.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;

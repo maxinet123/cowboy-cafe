@@ -1,4 +1,9 @@
-﻿using CowboyCafe.Data;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the CustomizeTexasTea.xaml
+*/
+using CowboyCafe.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,6 +24,9 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeTexasTea : UserControl
     {
+        /// <summary>
+        /// Initializes components and all the radiobutton event handlers for the xaml
+        /// </summary>
         public CustomizeTexasTea()
         {
             InitializeComponent();
@@ -40,9 +48,9 @@ namespace PointOfSale
         /// </summary>
         private void DrinkSizeChanged()
         {
-            if (DataContext is Drink side)
+            if (DataContext is Drink drink)
             {
-                switch (side.Size)
+                switch (drink.Size)
                 {
                     default:
                     case CowboyCafe.Data.Size.Small:
@@ -72,21 +80,21 @@ namespace PointOfSale
         {
             if (sender is RadioButton radio)
             {
-                if (DataContext is Drink side)
+                if (DataContext is Drink drink)
                 {
                     switch (radio.Name)
                     {
                         default:
                         case "SizeSmall":
-                            side.Size = CowboyCafe.Data.Size.Small;
+                            drink.Size = CowboyCafe.Data.Size.Small;
                             DrinkSizeChanged();
                             break;
                         case "SizeMedium":
-                            side.Size = CowboyCafe.Data.Size.Medium;
+                            drink.Size = CowboyCafe.Data.Size.Medium;
                             DrinkSizeChanged();
                             break;
                         case "SizeLarge":
-                            side.Size = CowboyCafe.Data.Size.Large;
+                            drink.Size = CowboyCafe.Data.Size.Large;
                             DrinkSizeChanged();
                             break;
                     }
