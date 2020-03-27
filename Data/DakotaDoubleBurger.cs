@@ -26,7 +26,7 @@ namespace CowboyCafe.Data
             { 
                 bun = value;
                 NotifyOfPropertyChanged("Bun");
-
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -41,6 +41,7 @@ namespace CowboyCafe.Data
             { 
                 cheese = value;
                 NotifyOfPropertyChanged("Cheese");
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -55,8 +56,8 @@ namespace CowboyCafe.Data
             { 
                 ketchup = value;
                 NotifyOfPropertyChanged("Ketchup");
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
-
         }
 
         private bool mustard = true;
@@ -70,6 +71,7 @@ namespace CowboyCafe.Data
             { 
                 mustard = value;
                 NotifyOfPropertyChanged("Mustard");
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -84,6 +86,7 @@ namespace CowboyCafe.Data
             { 
                 pickle = value;
                 NotifyOfPropertyChanged("Pickle");
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -98,6 +101,7 @@ namespace CowboyCafe.Data
             { 
                 tomato = value;
                 NotifyOfPropertyChanged("Tomato");
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -112,6 +116,7 @@ namespace CowboyCafe.Data
             { 
                 lettuce = value;
                 NotifyOfPropertyChanged("Lettuce");
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -126,7 +131,7 @@ namespace CowboyCafe.Data
             { 
                 mayo = value;
                 NotifyOfPropertyChanged("Mayo");
-
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 

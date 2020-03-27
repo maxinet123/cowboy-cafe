@@ -84,11 +84,11 @@ namespace CowboyCafe.Data
             {
                 default:
                 case Size.Small:
-                    return "Small Pan De Campo";
+                    return "Small Pan de Campo";
                 case Size.Medium:
-                    return "Medium Pan De Campo";
+                    return "Medium Pan de Campo";
                 case Size.Large:
-                    return "Large Pan De Campo";
+                    return "Large Pan de Campo";
             }
         }
     }

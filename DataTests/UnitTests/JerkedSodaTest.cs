@@ -114,7 +114,7 @@ namespace CowboyCafe.DataTests
             {
                 Ice = ice
             };
-            if (!ice) Assert.Collection(soda.SpecialInstructions, item => Assert.Equal("Hold Ice", item));
+            if (!ice) Assert.Collection(soda.SpecialInstructions, item => Assert.Equal("hold ice", item));
             if (ice) Assert.Empty(soda.SpecialInstructions);
         }
     }

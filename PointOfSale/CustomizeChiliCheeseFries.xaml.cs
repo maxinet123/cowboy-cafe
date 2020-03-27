@@ -46,7 +46,8 @@ namespace PointOfSale
         /// <summary>
         /// Changes the radio button depending on the enum that the user wants to set the size to.
         /// </summary>
-        private void SideSizeChanged() { 
+        private void SideSizeChanged() 
+        { 
             if (DataContext is Side side)
             {
                 switch (side.Size)

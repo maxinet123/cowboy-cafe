@@ -69,6 +69,7 @@ namespace PointOfSale
                         SizeMedium.IsChecked = false;
                         break;
                 }
+
             }
         }
         /// <summary>

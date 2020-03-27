@@ -43,6 +43,7 @@ namespace CowboyCafe.Data
             { 
                 cream = value;
                 NotifyOfPropertyChanged("RoomForCream");
+                NotifyOfPropertyChanged("SpecialInstructions");
 
             }
         }
@@ -58,6 +59,7 @@ namespace CowboyCafe.Data
             { 
                 decaf = value;
                 NotifyOfPropertyChanged("Decaf");
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -72,6 +74,7 @@ namespace CowboyCafe.Data
             { 
                 ice = value;
                 NotifyOfPropertyChanged("Ice");
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 

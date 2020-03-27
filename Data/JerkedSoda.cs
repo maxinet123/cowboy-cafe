@@ -63,6 +63,7 @@ namespace CowboyCafe.Data
             {
                 ice = value;
                 NotifyOfPropertyChanged("Ice");
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 

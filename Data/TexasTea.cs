@@ -43,6 +43,7 @@ namespace CowboyCafe.Data
             { 
                 sweet = value; 
                 NotifyOfPropertyChanged("Sweet");
+                //NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -57,6 +58,7 @@ namespace CowboyCafe.Data
             { 
                 lemon = value;
                 NotifyOfPropertyChanged("Lemon");
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -71,6 +73,7 @@ namespace CowboyCafe.Data
             { 
                 ice = value;
                 NotifyOfPropertyChanged("Ice");
+                NotifyOfPropertyChanged("SpecialInstructions");
             }
         }
 
