@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
+using CashRegister;
 
 namespace CowboyCafe.Data
 {
@@ -23,12 +24,12 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Starts the OrderNumber at 1
         /// </summary>
-        static private uint lastOrderNumber = 1;
+        static private uint lastOrderNumber = 0;
 
         /// <summary>
         /// Gets the lastOrderNumber and increments it for the next order 
         /// </summary>
-        public uint OrderNumber => lastOrderNumber++;
+        public uint OrderNumber => lastOrderNumber;
 
         /// <summary>
         /// List of items from the class of IOrderItems which is Price and SpecialInstructions
@@ -39,6 +40,25 @@ namespace CowboyCafe.Data
         /// Allows for the list of items to be found and displayed elsewhere when it is called
         /// </summary>
         public IEnumerable<IOrderItem> Items => items.ToArray();
+
+        /// <summary>
+        /// Increments 
+        /// </summary>
+        public Order()
+        {
+            lastOrderNumber++;
+        }
+        /// <summary>
+        /// Finds the total of the order plus tax
+        /// </summary>
+        public double Total
+        {
+            get
+            {
+                double tax = 0.16;
+                return Subtotal + (Subtotal * tax);
+            }
+        }
 
         /// <summary>
         /// Keeps track of the subtotal for the order and increases everytime an item is added to the list
@@ -54,6 +74,45 @@ namespace CowboyCafe.Data
                 }
                 return subtotal;
             }
+        }
+
+        /// <summary>
+        /// Prints order information to a receipt
+        /// </summary>
+        /// <param name="success"></param>
+        /// <param name="v2"></param>
+        /// <param name="v3"></param>
+        /// <returns></returns>
+        public string Receipt(bool cash, double money, double change)
+        {
+            StringBuilder sb = new StringBuilder();
+            DateTime time = new DateTime();
+            sb.Append("Order " + OrderNumber.ToString() + "\n");
+            sb.Append(time.ToString() + "\n\n");
+            foreach (IOrderItem item in Items)
+            {
+                sb.Append(item.ToString() + "     " + "$" + String.Format("{0:0.00}", item.Price) + "\n");
+                foreach (String instruction in item.SpecialInstructions)
+                {
+                    sb.Append("     " + instruction.ToString() + "\n");
+                }
+            }
+            sb.Append("\nSubtotal                           $" + String.Format("{0:0.00}", Subtotal));
+            double tax = 0.16;
+            sb.Append("Tax                              $" + String.Format("{0:0.00}", Subtotal*tax));
+            sb.Append("\nTotal                              $" + String.Format("{0:0.00}", Total));
+            if (cash)
+            {
+                sb.Append("CASH                               $" + String.Format("{0:0.00}", money) + "\n");
+                sb.Append("Change                               $" + String.Format("{0:0.00}", change) + "\n");
+            }
+            else
+            {
+                sb.Append("\nPaid                               $" + String.Format("{0:0.00}", Total) + "\n");
+            }
+
+            sb.Append("\n------------------------------------------\n");
+            return sb.ToString();
         }
 
         /// <summary>

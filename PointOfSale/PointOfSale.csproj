@@ -14,4 +14,10 @@
     <Folder Include="Properties\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="CashRegister">
+      <HintPath>..\..\..\source\repos\mvvm-data-binding-maxinet123\MVVMDataBinding\CashRegister.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
