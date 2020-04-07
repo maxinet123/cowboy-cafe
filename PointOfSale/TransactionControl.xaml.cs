@@ -1,4 +1,9 @@
-﻿using CashRegister;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the Transaction controls
+*/
+using CashRegister;
 using CowboyCafe.Data;
 using System;
 using System.Collections.Generic;
@@ -36,6 +41,7 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+        private double total = 0;
         /// <summary>
         /// Finds the total of the order plus tax
         /// </summary>
@@ -46,7 +52,8 @@ namespace PointOfSale
                 if (DataContext is Order order)
                 {
                     double tax = 0.16;
-                    return order.Subtotal + (order.Subtotal * tax);
+                    total = order.Subtotal + (order.Subtotal * tax);
+                    return Math.Round(total, 2);
                 }
                 else
                 {
@@ -73,8 +80,8 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                var screen = new CashRegisterControl(order, Total);
-                screen.DataContext = new CashRegisterModelView();
+                var screen = new CashRegisterControl(order);
+                screen.DataContext = new UsersMoneyGivenModelView();
                 this.Content = screen;
             }
         }
@@ -91,7 +98,7 @@ namespace PointOfSale
                 switch (cardterminal.ProcessTransaction(order.Total))
                 {
                     case ResultCode.Success:
-                        receiptprinter.Print(order.Receipt(true, 0, 0));
+                        receiptprinter.Print(order.Receipt(false, 0, 0));
                         screen = new OrderControl();
                         this.Content = screen;
                         break;

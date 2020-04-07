@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the CashRegister on the frontend
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -24,14 +29,10 @@ namespace PointOfSale
         public ReceiptPrinter receiptprinter = new ReceiptPrinter();
         
         private Order order;
-        public CashRegisterControl(Order order, double total)
+        public CashRegisterControl(Order order)
         {
             InitializeComponent();
-            this.DataContext = new CashRegisterModelView();
-            if (DataContext is CashRegisterModelView view)
-            {
-                view.TotalOwed = total;
-            }
+            this.DataContext = new UsersMoneyGivenModelView();
             this.order = order;
         }
         ///
@@ -52,10 +53,12 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnCompleteOrderButtonClicked(object sender, RoutedEventArgs e)
         {
-            if (DataContext is CashRegisterModelView view)
+            if (DataContext is UsersMoneyGivenModelView view)
             {
-                receiptprinter.Print(order.Receipt(false, view.TotalValue, view.TotalOwed));
-                var screen = new ChangeControl(view.TotalOwed);
+                view.TotalOwed = order.Total;
+                receiptprinter.Print(order.Receipt(true, view.TotalValue, view.TotalOwed));
+                double change = Math.Round(view.TotalValue - view.TotalOwed, 2);
+                var screen = new ChangeControl(change);
                 this.Content = screen;
             }
         }

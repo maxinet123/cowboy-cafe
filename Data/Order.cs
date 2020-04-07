@@ -98,19 +98,19 @@ namespace CowboyCafe.Data
             }
             sb.Append("\nSubtotal                           $" + String.Format("{0:0.00}", Subtotal));
             double tax = 0.16;
-            sb.Append("\nTax                              $" + String.Format("{0:0.00}", Subtotal*tax));
+            sb.Append("\nTax                                $" + String.Format("{0:0.00}", Subtotal*tax));
             sb.Append("\nTotal                              $" + String.Format("{0:0.00}", Total));
             if (cash)
             {
-                sb.Append("CASH                               $" + String.Format("{0:0.00}", money) + "\n");
-                sb.Append("Change                               $" + String.Format("{0:0.00}", money - owed) + "\n");
+                sb.Append("\nCASH                               $" + String.Format("{0:0.00}", money) + "\n");
+                sb.Append("Change                             $" + String.Format("{0:0.00}", money - owed) + "\n");
             }
             else
             {
-                sb.Append("\nPaid                               $" + String.Format("{0:0.00}", Total) + "\n");
+                sb.Append("\nCredit                             $" + String.Format("{0:0.00}", Total) + "\n");
             }
 
-            sb.Append("\n------------------------------------------\n");
+            sb.Append("\n------------------------------------------\n\n");
             return sb.ToString();
         }
 

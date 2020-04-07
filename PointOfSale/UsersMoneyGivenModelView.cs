@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Maxine Teixeira
+* Class: CIS 400
+* Purpose: A class that controls for the CashRegister backend
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
@@ -6,7 +11,7 @@ using CashRegister;
 
 namespace PointOfSale
 {
-    public class CashRegisterModelView : INotifyPropertyChanged
+    public class UsersMoneyGivenModelView : INotifyPropertyChanged
     {
         /// <summary>
         /// Notifies of property changed events
@@ -16,10 +21,14 @@ namespace PointOfSale
         /// <summary>
         /// The CashDrawer this class uses
         /// </summary>
-        static CashDrawer drawer = new CashDrawer();
-
+        public static CashDrawer drawer = new CashDrawer();
+        /// <summary>
+        /// Accesses the TotalOwed
+        /// </summary>
         public double TotalOwed { get; set; }
-
+        /// <summary>
+        /// Checks to see if there was enough money entered to cover the cost of the order
+        /// </summary>
         public bool SufficientFunds
         {
             get

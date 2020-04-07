@@ -38,25 +38,25 @@
             <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="3" Grid.Row="1" Background="White">
-            <local:BillControl Denomination="One" Quantity="{Binding Path=Ones}" Margin="7"/>
-            <local:BillControl Denomination="Two" Quantity="{Binding Path=Twos}" Margin="7"/>
-            <local:BillControl Denomination="Five" Quantity="{Binding Path=Fives}" Margin="7"/>
-            <local:BillControl Denomination="Ten" Quantity="{Binding Path=Tens}" Margin="7"/>
-            <local:BillControl Denomination="Twenty" Quantity="{Binding Path=Twenties}" Margin="7"/>
-            <local:BillControl Denomination="Fifty" Quantity="{Binding Path=Fifties}" Margin="7"/>
-            <local:BillControl Denomination="Hundred" Quantity="{Binding Path=Hundreds}" Margin="7"/>
+            <local:BillControl Denomination="One" Quantity="{Binding Path=Ones}" Margin="2" FontSize="18" Foreground="White"/>
+            <local:BillControl Denomination="Two" Quantity="{Binding Path=Twos}" Margin="2" FontSize="18" Foreground="White"/>
+            <local:BillControl Denomination="Five" Quantity="{Binding Path=Fives}" Margin="2" FontSize="18" Foreground="White"/>
+            <local:BillControl Denomination="Ten" Quantity="{Binding Path=Tens}" Margin="2" FontSize="18" Foreground="White"/>
+            <local:BillControl Denomination="Twenty" Quantity="{Binding Path=Twenties}" Margin="2" FontSize="18" Foreground="White"/>
+            <local:BillControl Denomination="Fifty" Quantity="{Binding Path=Fifties}" Margin="2" FontSize="18" Foreground="White"/>
+            <local:BillControl Denomination="Hundred" Quantity="{Binding Path=Hundreds}" Margin="2" FontSize="18" Foreground="White"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3" Background="White">
-            <local:CoinControl Denomination="Penny" Quantity="{Binding Path=Pennies}" Margin="7"/>
-            <local:CoinControl Denomination="Nickel" Quantity="{Binding Path=Nickels}" Margin="7"/>
-            <local:CoinControl Denomination="Dime" Quantity="{Binding Path=Dimes}" Margin="7"/>
-            <local:CoinControl Denomination="Quarter" Quantity="{Binding Path=Quarters}" Margin="7"/>
-            <local:CoinControl Denomination="HalfDollar" Quantity="{Binding Path=HalfDollars}" Margin="7"/>
-            <local:CoinControl Denomination="Dollar" Quantity="{Binding Path=Dollars}" Margin="7"/>
+            <local:CoinControl Denomination="Penny" Quantity="{Binding Path=Pennies}" Margin="2" FontSize="14"/>
+            <local:CoinControl Denomination="Nickel" Quantity="{Binding Path=Nickels}" Margin="2" FontSize="14"/>
+            <local:CoinControl Denomination="Dime" Quantity="{Binding Path=Dimes}" Margin="2" FontSize="14"/>
+            <local:CoinControl Denomination="Quarter" Quantity="{Binding Path=Quarters}" Margin="2" FontSize="14"/>
+            <local:CoinControl Denomination="HalfDollar" Quantity="{Binding Path=HalfDollars}" Margin="2" FontSize="14"/>
+            <local:CoinControl Denomination="Dollar" Quantity="{Binding Path=Dollars}" Margin="2" FontSize="14"/>
         </StackPanel>
         <TextBlock Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:TransactionControl}}, Path=Total, StringFormat={} Total: {0:c}}" FontSize="30" Grid.Row="0" Grid.ColumnSpan="3" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontFamily="Segoe UI"/>
         <Button Grid.Column="0" Click="OnCancelOrderButtonClicked" Grid.Row="3">Cancel</Button>
         <Button Grid.Column="2" Click="OnCompleteOrderButtonClicked" Grid.Row="3" IsEnabled="{Binding Path=SufficientFunds}">See Change</Button>
-        <TextBlock Text="{Binding Path=TotalValue, StringFormat={} Entered: {0:c}}" FontSize="30" Grid.Column="1" Grid.Row="3" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI" Foreground="White"/>
+        <TextBlock Text="{Binding Path=TotalValue, StringFormat={} Entered: {0:c}}" FontSize="30" Grid.Column="1" Grid.Row="3" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI"/>
     </Grid>
 </UserControl>
