@@ -54,7 +54,7 @@ namespace PointOfSale
         {
             if (DataContext is CashRegisterModelView view)
             {
-                receiptprinter.Print(order.Receipt(false, 0, 0));
+                receiptprinter.Print(order.Receipt(false, view.TotalValue, view.TotalOwed));
                 var screen = new ChangeControl(view.TotalOwed);
                 this.Content = screen;
             }

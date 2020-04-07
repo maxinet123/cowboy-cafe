@@ -83,12 +83,11 @@ namespace CowboyCafe.Data
         /// <param name="v2"></param>
         /// <param name="v3"></param>
         /// <returns></returns>
-        public string Receipt(bool cash, double money, double change)
+        public string Receipt(bool cash, double money, double owed)
         {
             StringBuilder sb = new StringBuilder();
-            DateTime time = new DateTime();
             sb.Append("Order " + OrderNumber.ToString() + "\n");
-            sb.Append(time.ToString() + "\n\n");
+            sb.Append(DateTime.Now.ToString() + "\n\n");
             foreach (IOrderItem item in Items)
             {
                 sb.Append(item.ToString() + "     " + "$" + String.Format("{0:0.00}", item.Price) + "\n");
@@ -99,12 +98,12 @@ namespace CowboyCafe.Data
             }
             sb.Append("\nSubtotal                           $" + String.Format("{0:0.00}", Subtotal));
             double tax = 0.16;
-            sb.Append("Tax                              $" + String.Format("{0:0.00}", Subtotal*tax));
+            sb.Append("\nTax                              $" + String.Format("{0:0.00}", Subtotal*tax));
             sb.Append("\nTotal                              $" + String.Format("{0:0.00}", Total));
             if (cash)
             {
                 sb.Append("CASH                               $" + String.Format("{0:0.00}", money) + "\n");
-                sb.Append("Change                               $" + String.Format("{0:0.00}", change) + "\n");
+                sb.Append("Change                               $" + String.Format("{0:0.00}", money - owed) + "\n");
             }
             else
             {
