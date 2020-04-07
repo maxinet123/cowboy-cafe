@@ -20,7 +20,6 @@ namespace PointOfSale
     /// </summary>
     public partial class BillControl : UserControl
     {
-        
         /// <summary>
         /// The DependencyProperty for the DenominationProperty
         /// </summary>
@@ -57,20 +56,6 @@ namespace PointOfSale
             get { return (int)GetValue(QuantityProperty); }
             set { SetValue(QuantityProperty, value); }
         }
-        private double entered = 0;
-        /// <summary>
-        /// If the coffee needs room for cream
-        /// </summary>
-        public double AmountEntered
-        {
-            get { return entered; }
-            set
-            {
-                entered = value;
-                //NotifyOfPropertyChanged("AmountEntered"); for addbills entered
-
-            }
-        }
         /// <summary>
         /// Initializes all the compenents for this class
         /// </summary>
@@ -86,7 +71,6 @@ namespace PointOfSale
         public void OnIncreaseClicked(object sender, RoutedEventArgs e)
         {
             Quantity++;
-
         }
         /// <summary>
         /// Decreases the quantity

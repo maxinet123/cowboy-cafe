@@ -56,13 +56,7 @@
         </StackPanel>
         <TextBlock Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:TransactionControl}}, Path=Total, StringFormat={} Total: {0:c}}" FontSize="30" Grid.Row="0" Grid.ColumnSpan="3" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontFamily="Segoe UI"/>
         <Button Grid.Column="0" Click="OnCancelOrderButtonClicked" Grid.Row="3">Cancel</Button>
-        <Button Grid.Column="2" Click="OnCompleteOrderButtonClicked" Grid.Row="3" IsEnabled="{Binding Path=SufficientFunds}">Complete</Button>
-        <Grid Grid.Row="3" Grid.Column="1" Background="White">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <TextBlock Text="{Binding Path=TotalValue, StringFormat=c}" FontSize="30" Grid.Row="0" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI"/>
-        </Grid>
+        <Button Grid.Column="2" Click="OnCompleteOrderButtonClicked" Grid.Row="3" IsEnabled="{Binding Path=SufficientFunds}">See Change</Button>
+        <TextBlock Text="{Binding Path=TotalValue, StringFormat={} Entered: {0:c}}" FontSize="30" Grid.Column="1" Grid.Row="3" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI" Foreground="White"/>
     </Grid>
 </UserControl>

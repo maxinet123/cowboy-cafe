@@ -73,13 +73,13 @@ namespace PointOfSale
                 if (quantity > 0)
                 {
                     drawer.AddCoin(Coins.Nickel, quantity);
-                    countPenny++;
+                    countNickel++;
                     totalValue += 0.05;
                 }
                 else
                 {
                     drawer.RemoveCoin(Coins.Nickel, -quantity);
-                    countPenny--;
+                    countNickel--;
                     totalValue -= 0.05;
                 }
                 InvokePropertyChanged("Nickels");
@@ -100,13 +100,13 @@ namespace PointOfSale
                 if (quantity > 0)
                 {
                     drawer.AddCoin(Coins.Dime, quantity);
-                    countPenny++;
+                    countDime++;
                     totalValue += 0.10;
                 }
                 else
                 {
                     drawer.RemoveCoin(Coins.Dime, -quantity);
-                    countPenny--;
+                    countDime--;
                     totalValue -= 0.10;
                 }
                 InvokePropertyChanged("Dimes");
@@ -127,13 +127,13 @@ namespace PointOfSale
                 if (quantity > 0)
                 {
                     drawer.AddCoin(Coins.Quarter, quantity);
-                    countPenny++;
+                    countQuarter++;
                     totalValue += 0.25;
                 }
                 else
                 {
                     drawer.RemoveCoin(Coins.Quarter, -quantity);
-                    countPenny--;
+                    countQuarter--;
                     totalValue -= 0.25;
                 }
                 InvokePropertyChanged("Quarters");
@@ -154,13 +154,13 @@ namespace PointOfSale
                 if (quantity > 0)
                 {
                     drawer.AddCoin(Coins.HalfDollar, quantity);
-                    countPenny++;
+                    countHalfDollar++;
                     totalValue += 0.50;
                 }
                 else
                 {
                     drawer.RemoveCoin(Coins.HalfDollar, -quantity);
-                    countPenny--;
+                    countHalfDollar--;
                     totalValue -= 0.50;
                 }
                 InvokePropertyChanged("HalfDollars");
@@ -181,13 +181,13 @@ namespace PointOfSale
                 if (quantity > 0)
                 {
                     drawer.AddCoin(Coins.Dollar, quantity);
-                    countPenny++;
+                    countDollar++;
                     totalValue += 1;
                 }
                 else
                 {
                     drawer.RemoveCoin(Coins.Dollar, -quantity);
-                    countPenny--;
+                    countDollar--;
                     totalValue -= 1;
                 }
                 InvokePropertyChanged("Dollars");
@@ -208,13 +208,13 @@ namespace PointOfSale
                 if (quantity > 0)
                 {
                     drawer.AddBill(Bills.One, quantity);
-                    countPenny++;
+                    countOnes++;
                     totalValue += 1;
                 }
                 else
                 {
                     drawer.RemoveBill(Bills.One, -quantity);
-                    countPenny--;
+                    countOnes--;
                     totalValue -= 1;
                 }
                 InvokePropertyChanged("Ones");
@@ -234,13 +234,13 @@ namespace PointOfSale
                 if (quantity > 0)
                 {
                     drawer.AddBill(Bills.Two, quantity);
-                    countPenny++;
+                    countTwos++;
                     totalValue += 2;
                 }
                 else
                 {
                     drawer.RemoveBill(Bills.Two, -quantity);
-                    countPenny--;
+                    countTwos--;
                     totalValue -= 2;
                 }
                 InvokePropertyChanged("Twos");
@@ -260,13 +260,13 @@ namespace PointOfSale
                 if (quantity > 0)
                 {
                     drawer.AddBill(Bills.Five, quantity);
-                    countPenny++;
+                    countFives++;
                     totalValue += 5;
                 }
                 else
                 {
                     drawer.RemoveBill(Bills.Five, -quantity);
-                    countPenny--;
+                    countFives--;
                     totalValue -= 5;
                 }
                 InvokePropertyChanged("Fives");
@@ -286,13 +286,13 @@ namespace PointOfSale
                 if (quantity > 0)
                 {
                     drawer.AddBill(Bills.Ten, quantity);
-                    countPenny++;
-                    totalValue += 0.01;
+                    countTens++;
+                    totalValue += 10;
                 }
                 else
                 {
                     drawer.RemoveBill(Bills.Ten, -quantity);
-                    countPenny--;
+                    countTens--;
                     totalValue -= 10;
                 }
                 InvokePropertyChanged("Tens");
@@ -312,13 +312,13 @@ namespace PointOfSale
                 if (quantity > 0)
                 {
                     drawer.AddBill(Bills.Twenty, quantity);
-                    countPenny++;
+                    countTwenties++;
                     totalValue += 20;
                 }
                 else
                 {
                     drawer.RemoveBill(Bills.Twenty, -quantity);
-                    countPenny--;
+                    countTwenties--;
                     totalValue -= 20;
                 }
                 InvokePropertyChanged("Twenties");
@@ -364,8 +364,8 @@ namespace PointOfSale
                 if (quantity > 0)
                 {
                     drawer.AddBill(Bills.Hundred, quantity);
-                    countHundreds--;
-                    totalValue -= 100;
+                    countHundreds++;
+                    totalValue += 100;
                 }
                 else
                 {
@@ -387,13 +387,6 @@ namespace PointOfSale
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TotalValue"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SufficientFunds"));
         }
-        /*public string FindChange()
-        {
-            if (totalValue > TotalOwed)
-            {
-
-            }
-        }*/
     }
 }
 

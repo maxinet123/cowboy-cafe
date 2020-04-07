@@ -74,6 +74,7 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 var screen = new CashRegisterControl(order, Total);
+                screen.DataContext = new CashRegisterModelView();
                 this.Content = screen;
             }
         }

@@ -27,6 +27,7 @@ namespace PointOfSale
         public CashRegisterControl(Order order, double total)
         {
             InitializeComponent();
+            this.DataContext = new CashRegisterModelView();
             if (DataContext is CashRegisterModelView view)
             {
                 view.TotalOwed = total;
@@ -51,10 +52,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnCompleteOrderButtonClicked(object sender, RoutedEventArgs e)
         {
-            receiptprinter.Print(order.Receipt(false, 0, 0));
-            var screen = new OrderControl();
-            this.Content = screen;
+            if (DataContext is CashRegisterModelView view)
+            {
+                receiptprinter.Print(order.Receipt(false, 0, 0));
+                var screen = new ChangeControl(view.TotalOwed);
+                this.Content = screen;
+            }
         }
-        
+       
     }
 }
