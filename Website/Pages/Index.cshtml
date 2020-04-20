@@ -1,0 +1,106 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1 class="text-center">Howdy Cowboys and Cowgirls!</h1>
+<h2 class="text-center">Cowboy Cafe Menu</h2>
+<h5 class="text-center">We at Cowboy Cafe are proud to bring you authentic trail meals from the American West. Shake off the dust on your boots and sake your thirst with one of our old-fashioned hand-jerked sodas. Dip your Pan de Campo into a bowl of beans. Or conquer the the mighty Texas Triple Burger! You’ve had a hard ride - so take it easy with us.</h5>
+
+<div class="columns">
+    <h3 class="menu-sections"><u>Entrees</u></h3>
+    @foreach (Entree item in Menu.Entrees())
+    {
+        <div class="menu-item">
+            <h4 class="name">@item.ToString()</h4>
+            <div class="details">
+                <ul>
+                    <li>Price: $@String.Format("{0:0.00}", item.Price)</li>
+                    <li>Calories: @item.Calories</li>
+                </ul>
+            </div>
+        </div>
+    }
+    <h3 class="menu-secitons"><u>Sides</u></h3>
+    @foreach (Side item in Menu.Sides())
+    {
+        <div class="menu-item">
+            <h4>@item.ItemName()</h4>
+            <div class="details">
+                @{item.Size = Size.Small;}
+                <h5>Small</h5>
+                <ul>
+                    <li>Price: $@String.Format("{0:0.00}", item.Price)</li>
+                    <li>Calories: @item.Calories</li>
+                </ul>
+                @{item.Size = Size.Medium;}
+                <h5>Medium</h5>
+                <ul>
+                    <li>Price: $@String.Format("{0:0.00}", item.Price)</li>
+                    <li>Calories: @item.Calories</li>
+                </ul>
+                @{item.Size = Size.Large;}
+                <h5>Large</h5>
+                <ul>
+                    <li>Price: $@String.Format("{0:0.00}", item.Price)</li>
+                    <li>Calories: @item.Calories</li>
+                </ul>
+            </div>
+        </div>
+    }
+</div>
+<div class="columns">
+    <h3 class="menu-sections"><u>Drinks</u></h3>
+    @foreach (Drink item in Menu.Drinks())
+    {
+        <div class="menu-item">
+            <h4>@item.ItemName()</h4>
+            <div class="details">
+                @if (item is JerkedSoda soda)
+                {
+                    <p>Birch Beer, Cream Soda, Orange Soda, Root Beer, Sarsparilla</p>
+                }
+                @{item.Size = Size.Small;}
+                <h5>Small</h5>
+                <ul>
+                    <li>Price: $@String.Format("{0:0.00}", item.Price)</li>
+                    <li>Calories: @item.Calories</li>
+                    @if (item is TexasTea smTea)
+                    {
+                        smTea.Sweet = false;
+                        <p class="description">(Unsweetened)</p>
+                        <li>Price: $@String.Format("{0:0.00}", item.Price)</li>
+                        <li>Calories: @item.Calories</li>
+                    }
+                </ul>
+                @{item.Size = Size.Medium;}
+                <h5>Medium</h5>
+                <ul>
+                    <li>Price: $@String.Format("{0:0.00}", item.Price)</li>
+                    <li>Calories: @item.Calories</li>
+                    @if (item is TexasTea mdTea)
+                    {
+                        mdTea.Sweet = false;
+                        <p class="description">(Unsweetened)</p>
+                        <li>Price: $@String.Format("{0:0.00}", item.Price)</li>
+                        <li>Calories: @item.Calories</li>
+                    }
+                </ul>
+                @{item.Size = Size.Large;}
+                <h5>Large</h5>
+                <ul>
+                    <li>Price: $@String.Format("{0:0.00}", item.Price)</li>
+                    <li>Calories: @item.Calories</li>
+                    @if (item is TexasTea lgTea)
+                    {
+                        lgTea.Sweet = false;
+                        <p class="description">(Unsweetened)</p>
+                        <li>Price: $@String.Format("{0:0.00}", item.Price)</li>
+                        <li>Calories: @item.Calories</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+</div>
+    

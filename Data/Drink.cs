@@ -74,6 +74,11 @@ namespace CowboyCafe.Data
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
         }
+        /// <summary>
+        /// Allows for the drink name to be printed for the website
+        /// </summary>
+        /// <returns>The string.</returns>
+        public abstract string ItemName();
     }
 
 }

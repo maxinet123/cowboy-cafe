@@ -4,6 +4,9 @@
 * Purpose: A class representing the OrderSummaryControl.xaml
 */
 using CowboyCafe.Data;
+using CowboyCafe.Data.Entrees;
+using CowboyCafe.Data.Drinks;
+using CowboyCafe.Data.Sides;
 using CowboyCafe.Extension;
 using System;
 using System.Collections.Generic;

@@ -4,7 +4,7 @@
 */
 using System;
 using System.Collections.Generic;
-using CowboyCafe.Data;
+using CowboyCafe.Data.Entrees;
 using Xunit;
 using System.ComponentModel;
 using System.Text;

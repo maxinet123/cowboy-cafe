@@ -16,6 +16,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using CowboyCafe.Data.Entrees;
+using CowboyCafe.Data.Sides;
+using CowboyCafe.Data.Drinks;
 using CowboyCafe.Extension;
 
 namespace PointOfSale

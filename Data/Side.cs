@@ -69,5 +69,10 @@ namespace CowboyCafe.Data
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
         }
+        /// <summary>
+        /// Allows for the side name to be printed on the website
+        /// </summary>
+        /// <returns>The string.</returns>
+        public abstract string ItemName();
     }
 }

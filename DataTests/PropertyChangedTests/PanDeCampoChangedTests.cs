@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using CowboyCafe.Data;
+using CowboyCafe.Data.Sides;
 using Xunit;
 using System.ComponentModel;
 using System.Text;

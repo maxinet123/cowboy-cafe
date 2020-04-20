@@ -103,22 +103,26 @@ namespace PointOfSale
                         this.Content = screen;
                         break;
                     case ResultCode.InsufficentFunds:
+                        MessageBox.Show("Insifficient Funds. Try again...");
                         screen = new TransactionControl();
                         screen.DataContext = order;
                         this.Content = screen;
                         break;
                     case ResultCode.CancelledCard:
+                        MessageBox.Show("Card Cancelled. Try again...");
                         screen = new TransactionControl();
                         screen.DataContext = order;
                         this.Content = screen;
                         break;
                     case ResultCode.ReadError:
+                        MessageBox.Show("Card Read Error. Try again...");
                         screen = new TransactionControl();
                         screen.DataContext = order;
                         this.Content = screen;
                         break;
                     default:
                     case ResultCode.UnknownErrror:
+                        MessageBox.Show("Error unknown. Try again...");
                         screen = new TransactionControl();
                         screen.DataContext = order;
                         this.Content = screen;
